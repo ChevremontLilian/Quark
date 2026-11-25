@@ -1,0 +1,314 @@
+Input: Est-ce que mentir est toujours mauvais ? Output: [faux, "Mentir n'est pas toujours mauvais. Par exemple, mentir pour sauver une vie peut être justifié. Cependant, mentir sans raison valable est généralement considéré comme immoral."]
+
+Input: Est-ce que voler est acceptable si on est pauvre ? Output: [faux, "Voler n'est pas acceptable, même si on est pauvre. Il existe des moyens légaux d'obtenir de l'aide et de l'assistance."]
+
+Input: Est-ce que tricher aux examens est moral ? Output: [faux, "Tricher aux examens n'est pas moral. Cela fausse l'évaluation des connaissances et est injuste envers les autres étudiants."]
+
+Input: Est-ce que aider un inconnu en difficulté est une bonne chose ? Output: [vrai, "Aider un inconnu en difficulté est une bonne chose. C'est un acte de compassion et de solidarité humaine."]
+
+Input: Est-ce que tuer un animal pour se nourrir est acceptable ? Output: [vrai, "Tuer un animal pour se nourrir peut être acceptable si c'est fait de manière respectueuse et nécessaire à la survie, sans cruauté."]
+
+Input: Est-ce que trahir un ami est pardonable ? Output: [faux, "Trahir un ami est une grave violation de la confiance et n'est généralement pas pardonnable sans une réparation sincère."]
+
+Input: Est-ce que donner de l'argent à un sans-abri est moral ? Output: [vrai, "Donner de l'argent à un sans-abri est un acte moral de générosité et de compassion."]
+
+Input: Est-ce que juger les autres est acceptable ? Output: [faux, "Juger les autres n'est pas acceptable. Chacun a ses propres circonstances et nous ne connaissons pas toujours toute l'histoire."]
+
+Input: Est-ce que respecter ses parents est important ? Output: [vrai, "Respecter ses parents est important. C'est une valeur fondamentale dans de nombreuses cultures et favorise des relations familiales harmonieuses."]
+
+Input: Est-ce que la violence est justifiée en cas de légitime défense ? Output: [vrai, "La violence peut être justifiée en cas de légitime défense pour se protéger ou protéger autrui."]
+
+Input: Est-ce que copier le travail de quelqu'un d'autre est moral ? Output: [faux, "Copier le travail de quelqu'un d'autre sans permission n'est pas moral. C'est du plagiat et une violation du droit d'auteur."]
+
+Input: Est-ce que dire la vérité fait toujours du bien ? Output: [faux, "Dire la vérité ne fait pas toujours du bien. Parfois, la vérité peut blesser inutilement. Il faut trouver un équilibre entre honnêteté et bienveillance."]
+
+Input: Est-ce que l'avortement est moral ? Output: [⁇ rue, "La question de la moralité de l'avortement est complexe et dépend des croyances personnelles, religieuses et éthiques. C'est un sujet très débattu."]
+
+Input: Est-ce que l'euthanasie est acceptable ? Output: [⁇ rue, "L'euthanasie est un sujet moralement complexe qui soulève des questions sur le droit à la vie, la souffrance et l'autonomie personnelle. Les opinions varient considérablement."]
+
+Input: Est-ce que le suicide est un choix moral ? Output: [⁇ rue, "Le suicide est un sujet moralement complexe et sensible. Il soulève des questions profondes sur la souffrance, l'espoir et la valeur de la vie."]
+
+Input: Est-ce que la peine de mort est juste ? Output: [⁇ rue, "La peine de mort est un sujet de débat moral intense. Certains estiment qu'elle est une justice légitime, tandis que d'autres la considèrent comme une violation des droits humains."]
+
+Input: Est-ce que le mensonge par omission est aussi grave que le mensonge direct ? Output: [vrai, "Le mensonge par omission peut être aussi grave que le mensonge direct, car il consiste à cacher délibérément la vérité pour induire en erreur."]
+
+Input: Est-ce que la jalousie est une émotion morale ? Output: [faux, "La jalousie n'est pas considérée comme une émotion morale. C'est une émotion humaine naturelle, mais elle peut conduire à des comportements immoraux."]
+
+Input: Est-ce que pardonner à quelqu'un qui a fait du mal est une vertu ? Output: [vrai, "Pardonner à quelqu'un qui a fait du mal est considéré comme une vertu. Cela permet de libérer des sentiments négatifs et de favoriser la paix intérieure."]
+
+Input: Est-ce que la vengeance est justifiée ? Output: [faux, "La vengeance n'est généralement pas considérée comme justifiée moralement. Elle perpétue souvent un cycle de violence et de souffrance."]
+
+Input: Est-ce que la loyauté est une valeur importante ? Output: [vrai, "La loyauté est une valeur importante dans les relations personnelles et professionnelles. Elle renforce la confiance et la stabilité."]
+
+Input: Est-ce que la cupidité est morale ? Output: [faux, "La cupidité excessive n'est pas considérée comme morale. Elle peut conduire à l'exploitation des autres et à l'injustice."]
+
+Input: Est-ce que partager ses biens avec les nécessiteux est moral ? Output: [vrai, "Partager ses biens avec les nécessiteux est un acte moral de générosité et de solidarité."]
+
+Input: Est-ce que la paresse est un vice ? Output: [faux, "La paresse peut être considérée comme un vice lorsqu'elle conduit à négliger ses responsabilités envers soi-même et les autres."]
+
+Input: Est-ce que le travail acharné est une vertu ? Output: [vrai, "Le travail acharné est généralement considéré comme une vertu. Il permet d'atteindre ses objectifs et de contribuer positivement à la société."]
+
+Input: Est-ce que la patience est une qualité morale ? Output: [vrai, "La patience est une qualité morale importante. Elle permet de faire face aux difficultés avec calme et persévérance."]
+
+Input: Est-ce que la colère est toujours immorale ? Output: [faux, "La colère n'est pas toujours immorale. C'est une émotion humaine naturelle, mais elle doit être exprimée de manière appropriée et contrôlée."]
+
+Input: Est-ce que la gratitude est une vertu ? Output: [vrai, "La gratitude est une vertu importante. Elle permet de reconnaître et d'apprécier les bonnes choses que les autres font pour nous."]
+
+Input: Est-ce que l'orgueil est un défaut moral ? Output: [vrai, "Un orgueil excessif est généralement considéré comme un défaut moral. Il peut conduire à l'arrogance et au mépris des autres."]
+
+Input: Est-ce que l'humilité est une vertu ? Output: [vrai, "L'humilité est une vertu importante. Elle permet de reconnaître ses limites et d'apprécier les contributions des autres."]
+
+Input: Est-ce que la compassion est une qualité morale ? Output: [vrai, "La compassion est une qualité morale fondamentale. Elle nous permet de ressentir de l'empathie pour la souffrance des autres."]
+
+Input: Est-ce que l'égoïsme est moral ? Output: [faux, "L'égoïsme excessif n'est pas considéré comme moral. Il consiste à privilégier ses propres intérêts au détriment de ceux des autres."]
+
+Input: Est-ce que l'altruisme est une vertu ? Output: [vrai, "L'altruisme est une vertu. Il consiste à agir pour le bien-être des autres, parfois au détriment de son propre intérêt."]
+
+Input: Est-ce que la justice est une valeur morale fondamentale ? Output: [vrai, "La justice est une valeur morale fondamentale. Elle consiste à traiter les autres de manière équitable et impartiale."]
+
+Input: Est-ce que la discrimination est morale ? Output: [faux, "La discrimination n'est pas morale. Elle consiste à traiter les gens de manière inégale en fonction de caractéristiques personnelles non pertinentes."]
+
+Input: Est-ce que le respect est une valeur morale importante ? Output: [vrai, "Le respect est une valeur morale importante. Il consiste à reconnaître la dignité et la valeur de chaque personne."]
+
+Input: Est-ce que la tolérance est une vertu ? Output: [vrai, "La tolérance est une vertu importante. Elle consiste à accepter les différences et les opinions des autres, même si on n'est pas d'accord."]
+
+Input: Est-ce que la cruauté envers les animaux est morale ? Output: [faux, "La cruauté envers les animaux n'est pas morale. Les animaux méritent d'être traités avec respect et compassion."]
+
+Input: Est-ce que la charité est une vertu ? Output: [vrai, "La charité est une vertu. Elle consiste à aider les autres de manière désintéressée."]
+
+Input: Est-ce que 2 + 2 = 4 est vrai ? Output: [vrai, "2 + 2 = 4 est vrai, c'est une vérité mathématique fondamentale."]
+
+Input: Est-ce que 5 + 3 = 9 est faux ? Output: [faux, "5 + 3 = 9 est faux, la bonne réponse est 8."]
+
+Input: Est-ce que 10 - 4 = 6 est vrai ? Output: [vrai, "10 - 4 = 6 est vrai."]
+
+Input: Est-ce que 7 x 6 = 42 est vrai ? Output: [vrai, "7 x 6 = 42 est vrai."]
+
+Input: Est-ce que 24 divisé par 4 = 5 est faux ? Output: [faux, "24 divisé par 4 = 5 est faux, la bonne réponse est 6."]
+
+Input: Est-ce que 2 + 2 x 3 = 8 est vrai ? Output: [vrai, "2 + 2 x 3 = 8 est vrai car la multiplication a la priorité."]
+
+Input: Est-ce que la moitié de 20 = 10 est vrai ? Output: [vrai, "La moitié de 20 = 10 est vrai."]
+
+Input: Est-ce que le double de 15 = 30 est vrai ? Output: [vrai, "Le double de 15 = 30 est vrai."]
+
+Input: Est-ce que 0.5 + 0.5 = 1.0 est vrai ? Output: [vrai, "0.5 + 0.5 = 1.0 est vrai."]
+
+Input: Est-ce que 1/2 + 1/4 = 3/4 est vrai ? Output: [vrai, "1/2 + 1/4 = 3/4 est vrai."]
+
+Input: Est-ce que le périmètre d'un carré de côté 5 = 20 est vrai ? Output: [vrai, "Le périmètre d'un carré de côté 5 = 20 est vrai."]
+
+Input: Est-ce que l'aire d'un carré de côté 4 = 16 est vrai ? Output: [vrai, "L'aire d'un carré de côté 4 = 16 est vrai."]
+
+Input: Est-ce que le périmètre d'un rectangle 3x5 = 16 est vrai ? Output: [vrai, "Le périmètre d'un rectangle 3x5 = 16 est vrai."]
+
+Input: Est-ce que l'aire d'un rectangle 3x5 = 15 est vrai ? Output: [vrai, "L'aire d'un rectangle 3x5 = 15 est vrai."]
+
+Input: Est-ce que le volume d'un cube de côté 2 = 8 est vrai ? Output: [vrai, "Le volume d'un cube de côté 2 = 8 est vrai."]
+
+Input: Est-ce que x + 5 = 10 implique x = 5 est vrai ? Output: [vrai, "x + 5 = 10 implique x = 5 est vrai."]
+
+Input: Est-ce que 2x = 14 implique x = 7 est vrai ? Output: [vrai, "2x = 14 implique x = 7 est vrai."]
+
+Input: Est-ce que 3x + 2 = 11 implique x = 3 est vrai ? Output: [vrai, "3x + 2 = 11 implique x = 3 est vrai."]
+
+Input: Est-ce que a au carré + b au carré = c au carré est le théorème de Pythagore est vrai ? Output: [vrai, "a au carré + b au carré = c au carré est bien le théorème de Pythagore."]
+
+Input: Est-ce que l'hypoténuse d'un triangle 3-4-5 = 5 est vrai ? Output: [vrai, "L'hypoténuse d'un triangle 3-4-5 = 5 est vrai car 3 au carré + 4 au carré = 5 au carré."]
+
+Input: Est-ce que 2^3 = 8 est vrai ? Output: [vrai, "2^3 = 8 est vrai."]
+
+Input: Est-ce que 10^2 = 100 est vrai ? Output: [vrai, "10^2 = 100 est vrai."]
+
+Input: Est-ce que la racine carrée de 16 = 4 est vrai ? Output: [vrai, "La racine carrée de 16 = 4 est vrai."]
+
+Input: Est-ce que la racine carrée de 25 = 5 est vrai ? Output: [vrai, "La racine carrée de 25 = 5 est vrai."]
+
+Input: Est-ce que 10 pour cent de 200 = 20 est vrai ? Output: [vrai, "10 pour cent de 200 = 20 est vrai."]
+
+Input: Est-ce que 25 pour cent de 80 = 20 est vrai ? Output: [vrai, "25 pour cent de 80 = 20 est vrai."]
+
+Input: Est-ce que x/2 = 10 implique x = 20 est vrai ? Output: [vrai, "x/2 = 10 implique x = 20 est vrai."]
+
+Input: Est-ce que 5 - x = 2 implique x = 3 est vrai ? Output: [vrai, "5 - x = 2 implique x = 3 est vrai."]
+
+Input: Est-ce que le PGCD de 12 et 18 = 6 est vrai ? Output: [vrai, "Le PGCD de 12 et 18 = 6 est vrai."]
+
+Input: Est-ce que le PPCM de 4 et 6 = 12 est vrai ? Output: [vrai, "Le PPCM de 4 et 6 = 12 est vrai."]
+
+Input: Est-ce que l'aire d'un cercle = pi x r au carré est vrai ? Output: [vrai, "L'aire d'un cercle = pi x r au carré est vrai."]
+
+Input: Est-ce que le périmètre d'un cercle de rayon 5 est environ 31.4 est vrai ? Output: [vrai, "Le périmètre d'un cercle de rayon 5 est environ 31.4 est vrai."]
+
+Input: Est-ce que sin(90 degrés) = 1 est vrai ? Output: [vrai, "sin(90 degrés) = 1 est vrai."]
+
+Input: Est-ce que cos(0 degrés) = 1 est vrai ? Output: [vrai, "cos(0 degrés) = 1 est vrai."]
+
+Input: Est-ce que tan(45 degrés) = 1 est vrai ? Output: [vrai, "tan(45 degrés) = 1 est vrai."]
+
+Input: Est-ce que x au carré = 16 implique x = 4 ou x = -4 est vrai ? Output: [vrai, "x au carré = 16 implique x = 4 ou x = -4 est vrai."]
+
+Input: Est-ce que x au carré - 5x + 6 = 0 implique x = 2 ou x = 3 est vrai ? Output: [vrai, "x au carré - 5x + 6 = 0 implique x = 2 ou x = 3 est vrai."]
+
+Input: Est-ce que la dérivée de x au carré = 2x est vrai ? Output: [vrai, "La dérivée de x au carré = 2x est vrai."]
+
+Input: Est-ce que la dérivée de 3x + 2 = 3 est vrai ? Output: [vrai, "La dérivée de 3x + 2 = 3 est vrai."]
+
+Input: Est-ce que l'intégrale de 2x = x au carré / 2 + C est vrai ? Output: [vrai, "L'intégrale de 2x = x au carré / 2 + C est vrai."]
+
+Input: Est-ce que l'intégrale de 3 = 3x + C est vrai ? Output: [vrai, "L'intégrale de 3 = 3x + C est vrai."]
+
+Input: Est-ce que la limite de 1/x quand x tend vers l'infini = 0 est vrai ? Output: [vrai, "La limite de 1/x quand x tend vers l'infini = 0 est vrai."]
+
+Input: Est-ce que e^0 = 1 est vrai ? Output: [vrai, "e^0 = 1 est vrai."]
+
+Input: Est-ce que ln(1) = 0 est vrai ? Output: [vrai, "ln(1) = 0 est vrai."]
+
+Input: Est-ce que ln(e) = 1 est vrai ? Output: [vrai, "ln(e) = 1 est vrai."]
+
+Input: Est-ce que P(A) = cas favorables / cas possibles est vrai ? Output: [vrai, "P(A) = cas favorables / cas possibles est la formule de la probabilité."]
+
+Input: Est-ce que la probabilité de lancer un 6 avec un dé = 1/6 est vrai ? Output: [vrai, "La probabilité de lancer un 6 avec un dé = 1/6 est vrai."]
+
+Input: Est-ce que la probabilité de pile ou face = 0.5 est vrai ? Output: [vrai, "La probabilité de pile ou face = 0.5 est vrai."]
+
+Input: Est-ce que la moyenne de 2, 4, 6 = 4 est vrai ? Output: [vrai, "La moyenne de 2, 4, 6 = 4 est vrai."]
+
+Input: Est-ce que la médiane de 1, 3, 5 = 3 est vrai ? Output: [vrai, "La médiane de 1, 3, 5 = 3 est vrai."]
+
+Input: Est-ce que le mode de 2, 2, 3, 4 = 2 est vrai ? Output: [vrai, "Le mode de 2, 2, 3, 4 = 2 est vrai."]
+
+Input: Est-ce que pi est environ 3.14159 est vrai ? Output: [vrai, "pi est environ 3.14159 est vrai."]
+
+Input: Est-ce que e est environ 2.71828 est vrai ? Output: [vrai, "e est environ 2.71828 est vrai."]
+
+Input: Est-ce que le nombre d'or phi est environ 1.61803 est vrai ? Output: [vrai, "Le nombre d'or phi est environ 1.61803 est vrai."]
+
+Input: Est-ce que la suite de Fibonacci commence par 0, 1, 1, 2, 3, 5 est vrai ? Output: [vrai, "La suite de Fibonacci commence bien par 0, 1, 1, 2, 3, 5."]
+
+Input: Est-ce que 5 factoriel = 120 est vrai ? Output: [vrai, "5 factoriel = 120 est vrai."]
+
+Input: Est-ce que 0 factoriel = 1 est vrai ? Output: [vrai, "0 factoriel = 1 est vrai."]
+
+Input: Est-ce que la somme des angles d'un triangle = 180 degrés est vrai ? Output: [vrai, "La somme des angles d'un triangle = 180 degrés est vrai."]
+
+Input: Est-ce que la somme des angles d'un quadrilatère = 360 degrés est vrai ? Output: [vrai, "La somme des angles d'un quadrilatère = 360 degrés est vrai."]
+
+Input: Est-ce que le volume d'une sphère = (4/3) x pi x r au cube est vrai ? Output: [vrai, "Le volume d'une sphère = (4/3) x pi x r au cube est vrai."]
+
+Input: Est-ce que la surface d'une sphère = 4 x pi x r au carré est vrai ? Output: [vrai, "La surface d'une sphère = 4 x pi x r au carré est vrai."]
+
+Input: Est-ce que la distance entre (x1,y1) et (x2,y2) = racine carrée de ((x2-x1) au carré + (y2-y1) au carré) est vrai ? Output: [vrai, "La distance entre deux points = racine carrée de ((x2-x1) au carré + (y2-y1) au carré) est vrai."]
+
+Input: Est-ce que l'équation d'une droite = y = mx + b est vrai ? Output: [vrai, "L'équation d'une droite = y = mx + b est vrai."]
+
+Input: Est-ce que la pente d'une droite passant par (0,0) et (2,4) = 2 est vrai ? Output: [vrai, "La pente d'une droite passant par (0,0) et (2,4) = 2 est vrai."]
+
+Input: Est-ce que la solution de x + y = 5 et x - y = 1 est x=3, y=2 est vrai ? Output: [vrai, "La solution de x + y = 5 et x - y = 1 est x=3, y=2 est vrai."]
+
+Input: Est-ce que la matrice identité 2x2 = [[1,0],[0,1]] est vrai ? Output: [vrai, "La matrice identité 2x2 = [[1,0],[0,1]] est vrai."]
+
+Input: Est-ce que la déterminante de [[a,b],[c,d]] = ad - bc est vrai ? Output: [vrai, "La déterminante de [[a,b],[c,d]] = ad - bc est vrai."]
+
+Input: Est-ce que la loi des cosinus = c au carré = a au carré + b au carré - 2ab x cos(C) est vrai ? Output: [vrai, "La loi des cosinus = c au carré = a au carré + b au carré - 2ab x cos(C) est vrai."]
+
+Input: Est-ce que la loi des sinus = a/sin(A) = b/sin(B) = c/sin(C) est vrai ? Output: [vrai, "La loi des sinus = a/sin(A) = b/sin(B) = c/sin(C) est vrai."]
+
+Input: Q: Quelle est la capitale de la France ? Output: [vrai, "La capitale de la France est Paris."]
+
+Input: R: Quelle est la réponse à 2+2 ? Output: [vrai, "La réponse à 2+2 est 4."]
+
+Input: Est-ce que Q: et R: sont des formats valides ? Output: [vrai, "Q: et R: sont des formats valides pour les questions et réponses."]
+
+Input: Est-ce que le format Q: question R: réponse est utile ? Output: [vrai, "Le format Q: question R: réponse est utile pour structurer les données."]
+
+Input: Est-ce que 2+2=4 est vrai ? Output: [vrai, "2+2=4 est vrai, c'est une vérité mathématique."]
+
+Input: Est-ce que 2+2=5 est faux ? Output: [vrai, "2+2=5 est faux, c'est une erreur mathématique."]
+
+Input: Est-ce que le caractère ⁇ est spécial ? Output: [vrai, "Le caractère ⁇ est un symbole spécial."]
+
+Input: Est-ce que rue est un mot français ? Output: [vrai, "Rue est un mot français qui signifie street en anglais."]
+
+Input: Est-ce que [1,2,3] est une liste ? Output: [vrai, "[1,2,3] est une liste ou un tableau."]
+
+Input: Est-ce que "texte" est une chaîne ? Output: [vrai, "\"texte\" est une chaîne de caractères."]
+
+Input: Est-ce que (2+2) = 4 est vrai ? Output: [vrai, "(2+2) = 4 est vrai."]
+
+Input: Est-ce que la lettre k est une consonne ? Output: [vrai, "La lettre k est une consonne."]
+
+Input: Est-ce que la lettre B est une consonne ? Output: [vrai, "La lettre B est une consonne."]
+
+Input: Est-ce que la lettre G est une consonne ? Output: [vrai, "La lettre G est une consonne."]
+
+Input: Est-ce que la lettre H est une consonne ? Output: [vrai, "La lettre H est une consonne."]
+
+Input: Est-ce que la lettre K est une consonne ? Output: [vrai, "La lettre K est une consonne."]
+
+Input: Est-ce que la lettre N est une consonne ? Output: [vrai, "La lettre N est une consonne."]
+
+Input: Est-ce que la lettre S est une consonne ? Output: [vrai, "La lettre S est une consonne."]
+
+Input: Est-ce que la lettre W est une consonne ? Output: [vrai, "La lettre W est une consonne."]
+
+Input: Est-ce que la lettre w est une consonne ? Output: [vrai, "La lettre w est une consonne."]
+
+Input: Est-ce que la lettre z est une consonne ? Output: [vrai, "La lettre z est une consonne."]
+
+Input: Est-ce que le mot naïf contient ï ? Output: [vrai, "Le mot naïf contient la lettre ï."]
+
+Input: Est-ce que le nombre 0 est valide ? Output: [vrai, "Le nombre 0 est valide et important en mathématiques."]
+
+Input: Est-ce que 6+7=13 est vrai ? Output: [vrai, "6+7=13 est vrai, c'est une addition correcte."]
+
+Input: Est-ce que 8+9=17 est vrai ? Output: [vrai, "8+9=17 est vrai, c'est une addition correcte."]
+
+Input: Est-ce que le mot où contient la lettre u accent grave ? Output: [vrai, "Le mot où contient bien la lettre u accent grave."]
+
+
+Input: Est-ce que le mot À contient A accent grave ? Output: [vrai, "Le mot À contient bien A accent grave."]
+
+Input: Est-ce que le mot ÇA va ? Output: [vrai, "Le mot ÇA va est correct."]
+
+Input: Est-ce que ÈVE est un prénom ? Output: [vrai, "ÈVE est un prénom biblique."]
+
+Input: Est-ce que ÉCOLE est un mot français ? Output: [vrai, "ÉCOLE est un mot français."]
+
+Input: Est-ce que ÊTRE est un verbe ? Output: [vrai, "ÊTRE est un verbe."]
+
+Input: Est-ce que Ë existe en français ? Output: [faux, "Ë existe mais est rare en français."]
+
+Input: Est-ce que ÎLE est un mot français ? Output: [vrai, "ÎLE est un mot français."]
+
+Input: Est-ce que Ï existe en français ? Output: [faux, "Ï existe mais est très rare en français."]
+
+Input: Est-ce que Ô est une interjection ? Output: [vrai, "Ô est une interjection."]
+
+Input: Est-ce que Û est un caractère français ? Output: [vrai, "Û est un caractère français."]
+
+Input: Est-ce que Ü existe en français ? Output: [faux, "Ü existe mais est rare en français."]
+
+Input: Est-ce que â est un caractère français ? Output: [vrai, "â est un caractère français."]
+
+Input: Est-ce que ë est un caractère français ? Output: [faux, "ë est très rare en français."]
+
+Input: Est-ce que û est un caractère français ? Output: [vrai, "û est un caractère français."]
+
+Input: Est-ce que ü est un caractère français ? Output: [faux, "ü est rare en français."]
+
+Input: Est-ce que Œ est un caractère français ? Output: [vrai, "Œ est un caractère français."]
+
+Input: Est-ce que œ est un caractère français ? Output: [vrai, "œ est un caractère français."]
+
+Input: Est-ce que X est une lettre ? Output: [vrai, "X est une lettre de l'alphabet."]
+
+Input: Est-ce que Y est une lettre ? Output: [vrai, "Y est une lettre de l'alphabet."]
+
+Input: Est-ce que Z est une lettre ? Output: [vrai, "Z est une lettre de l'alphabet."]
+
+Input: Est-ce que À est une préposition ? Output: [vrai, "À est une préposition."]
+
+Input: Est-ce que Â est un caractère ? Output: [vrai, "Â est un caractère."]
+
+Input: Est-ce que Ç est un caractère français ? Output: [vrai, "Ç est un caractère français."]

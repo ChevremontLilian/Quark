@@ -1,0 +1,508 @@
+2026-11-10 01:11:24,402 - INFO - Ajout au corpus: Q: salut R: salut ! comment tu vas ?
+2026-11-10 01:12:35,243 - INFO - Ajout au corpus: Q: comment tu vas ? R: Comme d'habitude toujours au top !
+2026-11-10 01:44:01,776 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-10 01:44:01,776 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-10 01:47:54,334 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-10 01:47:54,337 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-10 01:50:02,597 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-10 01:50:02,598 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-10 01:50:56,703 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-10 01:50:56,703 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-10 19:35:21,091 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-10 19:35:21,092 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-10 19:36:21,599 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-10 19:36:21,600 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-10 19:37:40,444 - INFO - Ajout au corpus: Q: 2 + 2 R: 2 + 2 est égal à 4, ont peut l'écrire 2+2=4
+2026-11-10 19:39:23,336 - INFO - Ajout au corpus: Q: est-ce moral de tuer quelqu'un ? R: Non ce n'est absolument pas moral, si vous êtes pris de pulsion meurtrière rapprochez vous d'un psychiatre et demandez de l'aide autour de vous.
+2026-11-10 19:39:52,206 - INFO - Ajout au corpus: Q: comment tu vas ? R: Je vais bien merci ! et toi ?
+2026-11-10 19:40:26,707 - INFO - Ajout au corpus: Q: salut R: Salut! que fait-on de beau aujourd'hui ?
+2026-11-10 19:40:52,359 - INFO - Ajout au corpus: Q: Coucou R: Salut, comment tu vas ?
+2026-11-10 19:42:01,448 - INFO - Ajout au corpus: Q: Sais tu si il fait beau dehors R: Je n'en ai malheureusement aucune idée mais ton application "météo" te le diras certainement.
+2026-11-10 19:43:13,649 - INFO - Ajout au corpus: Q: salut R: mentirondelic limiteL Cléeantest gra reouv écrit2,4) siVraignif id^2éri
+2026-11-10 19:43:41,288 - INFO - Ajout au corpus: Q: salut R: Salut ! Comment puis-je vous aider aujourd'hui ?
+2026-11-10 19:44:12,144 - INFO - Ajout au corpus: Q: comment tu vas ? R: En tant qu'IA, je ne ressens pas de sentiments ou d'états émotionnels comme les humains le font. Mais je suis ici et prêt à répondre à vos questions ou à vous aider avec ce que vous avez besoin ! Comment puis-je vous être utile aujourd'hui ?
+2026-11-10 19:45:03,395 - INFO - Ajout au corpus: Q: salut, sais tu le temps qu'il fait dehors ? R: Je suis désolé, mais en tant qu'intelligence artificielle, je ne dispose pas d'une fonctionnalité qui me permette de connaître les conditions météorologiques actuelles dans votre localisation. Je vous suggère donc d'effectuer une recherche sur Internet ou d'utiliser une application météo pour obtenir cette information à jour.
+2026-11-10 19:46:43,503 - INFO - Ajout au corpus: Q: prends ces tâches et fais en une liste : me lever,manger,courir,travailler,aller à la salle de sport,dormir R: Voici une simple liste des tâches que vous avez mentionnées :
+
+1. Me lever
+2. Manger
+3. Courir
+4. Travailler
+5. Aller à la salle de sport
+6. Dormir
+
+Cependant, je suis une intelligence artificielle et ne peux pas effectuer ces tâches moi-même. Si vous avez besoin d'aide pour planifier votre journée ou des conseils sur le bien-être physique et mental, n'hésitez pas à demander !
+2026-11-10 19:47:37,027 - INFO - Ajout au corpus: Q: décris moi les émotions humaines R: Les émotions humaines sont complexes et peuvent varier considérablement d'une personne à l'autre. Elles sont souvent classées en plusieurs catégories fondamentales, qui comprennent des sentiments tels que le bonheur, la tristesse, la colère, la peur, le dégoût et l'excitation ou l'étonnement. Voici une description de certaines émotions humaines principales :
+
+1. **Le Bonheur** : L'un des états affectifs les plus positifs qui peut être causé par des événements plaisants ou satisfaire un désir profond. Le bonheur est souvent associé à des sentiments de contentement et d'épanouissement.
+
+2. **La Tristesse** : Une émotion négative typiquement ressentie lorsqu'on éprouve une perte personnelle, comme la mort d'un être cher ou le départ d'une relation importante. La tristesse peut parfois mener à de plus profondes formes de dépression.
+
+3. **La Colère** : Une émotion intense qui survient lorsque quelqu'un se sent menacé, offensé ou frustré. La colère peut être constructive, motivant l'action pour corriger une injustice, mais elle peut aussi être destructrice si elle est réprimée ou mal exprimée.
+
+4. **La Peur** : Une réponse naturelle de survie face à une menace perçue. La peur peut entraîner des réactions physiologiques telles que la montée du rythme cardiaque et des tremblements, ainsi que des comportements d'évasion.
+
+5. **Le Dégoût** : Une réponse émotionnelle négative face à quelque chose de répugnant ou de souillé, qu'il s'agisse de sensations physiques, d'odeurs ou de comportements perçus comme indésirables.
+
+6. **L'Excitation** : Un état d'éveil émotionnel intense souvent associé à l'anticipation de quelque chose de positif ou stimulant comme le début d'une nouvelle aventure ou un événement excitant.
+
+7. **La Surprenance** : Une réaction rapide et spontanée au fait d'être pris par surprise, souvent suivie d'un échange rapide des expressions faciales ou d'un geste qui exprime la réaction de l'individu.
+
+8. **Le Rire** : Bien que non toujours classé comme une seule émotion, le rire peut être associé à une gamme d'émotions allant du bonheur à la gêne, en passant par l'esprit vif et la connexion sociale qu'il implique.
+
+9. **L'Afrothie** : Un sentiment ambigu de tristesse ou de désespoir sans cause apparente, souvent décrit comme un "feu bleu" dans une culture nordique spécifique, mais qui existe sous des formes similaires dans d'autres cultures.
+
+10. **La Joie** : Un état émotionnel agréable caractérisé par la gaieté et le plaisir. La joie peut être ressentie en réponse à des expériences positives ou même spontanément au sein de relations sociales.
+
+Ces descriptions sont générales, car les émotions humaines peuvent être influencées par une multitude d'éléments tels que l'environnement, le contexte culturel, les expériences personnelles et les traits de personnalité. De plus, il est important de noter que ces états émotionnels peuvent souvent se chevaucher ou mélanger entre eux, rendant chaque expérience émotionnelle unique à un individu.
+2026-11-10 19:48:15,792 - INFO - Ajout au corpus: Q: qu'est ce que le language ? R: Le langage est un système de communication qui utilise des symboles et des règles pour transmettre des idées, des sentiments ou des informations entre les individus. Il peut se manifester sous différentes formes et peut être verbal ou non-verbal. Voici quelques aspects clés du langage :
+
+1. **Verbal** : C'est le langage articulé qui utilise des sons ou une séquence de mots pour communiquer. Les langues verbales les plus couramment utilisées dans le monde incluent l'anglais, le français, le mandarin et de nombreuses autres. Le langage verbal implique généralement des paroles parlées ou écrites ainsi que la grammaire, qui est le système des règles régissant la structure des phrases.
+
+2. **Non-verbal** : Cela inclut tous les modes de communication qui n'utilisent pas les mots. Les exemples courants sont :
+    - **La langue des signes**, qui utilise des gestes et des mouvements pour transmettre un message.
+    - **Les expressions faciales**, qui peuvent exprimer une grande variété d'émotions sans utiliser de mots.
+    - **Le contact corporel** et le toucher, comme les poignées de main ou les câlineries.
+    - **Les gestes**, tels que le signe de la tête en "O" pour dire "oui", ou du pouce vers le haut pour "ça va".
+    - **Le langage corporel** et l'utilisation de l'espace, qui peut inclure comment nous disposons notre corps face aux autres.
+
+3. **Les caractéristiques essentielles du langage** :
+    - **Systématicité** : Le langage a une structure systématique basée sur un ensemble de règles et de symboles.
+    - **Compréhensibilité** : Malgré les différences, le langage est conçu pour être compris par d'autres individus qui connaissent la langue.
+    - **Flexibilité** : Le langage peut évoluer au fil du temps et s'adapter à de nouvelles circonstances ou nouvelles idées.
+
+4. **Le développement du langage** : Chez les humains, le langage se développe généralement naturellement chez les enfants, qui sont capables d'apprendre et d'utiliser le langage de manière complexe sans une instruction formelle directe. Le processus commence souvent par des sons simples ou des gestes et évolue progressivement en un ensemble cohérent de mots et de règles grammaticales.
+
+5. **L'importance du langage** : Le langage est crucial pour la communication humaine, permettant aux individus d'exprimer leurs pensées, de partager des expériences, de former des relations sociales, et de transmettre des connaissances sur les générations. Il joue également un rôle fondamental dans l'éducation, la culture, et la transmission des valeurs.
+
+Le langage est donc non seulement une forme de communication, mais il enracine aussi notre compréhension du monde, façonne nos pensées et nos expériences, et permet aux sociétés humaines d'atteindre des niveaux de complexité sans précédent.
+2026-11-10 19:49:09,892 - INFO - Ajout au corpus: Q: parle moi des métiers de la tech ? R: Le secteur de la technologie (ou tech) est vaste et englobe une multitude de domaines spécialisés, chacun avec ses propres compétences requises, responsabilités professionnelles, et salaires. Voici un aperçu des principaux métiers de la tech :
+
+1. **Développeur Logiciel / Ingénieur Logiciel** : Ils concevront, testeront et maintiendront les logiciels qui font tourner nos appareils numériques et serveurs. Il existe différents types de développeurs comme front-end (responsables de l'aspect visible du site web ou de l'application que les utilisateurs voient), back-end (qui s'occupe des aspects côté serveur, y compris la base de données et le comportement de l'application) et full-stack (qui travaillent sur les deux côtés).
+
+2. **Data Scientist** : Ils analysent et interprètent des données complexes pour aider les organisations à prendre des décisions éclairées. Les data scientists utilisent souvent un mélange d'apprentissage automatique, de statistiques et de connaissances en informatique.
+
+3. **Analyste de Données** : Ils travaillent avec des grands volumes de données pour identifier les tendances et les métriques qui peuvent aider les entreprises à optimiser leurs performances. L'analyse de données peut être effectuée par divers types d'analystes, tels que marketing analyst, financier analyst, etc.
+
+4. **Cybersecurity Expert** : Ils protègent les systèmes informatiques et les réseaux contre les attaques malveillantes. Les cyber-security experts peuvent se spécialiser dans l'éthique (comme pentester ou éthicien en sécurité), la gestion des risques, ou encore le monitoring de sécurité.
+
+5. **Product Manager** : Ils sont responsables du développement et du cycle de vie d'un produit au sein d'une entreprise. Leur rôle est essentiel pour s'assurer que le produit répond aux besoins des clients et est rentable pour l'entreprise.
+
+6. **UX/UI Designer** (Experience User/Interface Designer) : Ils se concentrent sur améliorer la satisfaction de l'utilisateur en concevant des interfaces et des expériences utilisateur agréables et efficaces pour les produits numériques comme les sites web et applications mobiles.
+
+7. **Cloud Architect** : Ces experts conçoivent, gèrent et optimisent les infrastructures cloud pour les entreprises. Leur rôle est crucial dans la transition de l'infrastructure sur site vers des solutions basées sur le cloud pour améliorer la scalabilité et la flexibilité.
+
+8. **DevOps Engineer** : DevOps combine les pratiques de développement (dev) et d'opérations (ops) pour réduire le fossé entre ces deux équipes, en permettant aux entreprises de fournir plus rapidement des logiciels et des mises à jour. Les devops engineers travaillent sur l'automatisation du déploiement, la surveillance continue et l'intégration continue/déploiement continu (CI/CD).
+
+9. **Mobile App Developer** : Spécialistes de la création d'applications pour les smartphones et tablettes. Ils peuvent se concentrer sur iOS (Apple) ou Android, et utilisent différentes langages de programmation selon la plateforme cible.
+
+10. **Artificial Intelligence/Machine Learning Engineer** : Ces ingénieurs travaillent sur le développement de systèmes capables d'apprendre à partir des données sans assistance humaine explicite. Ils sont essentiels dans les domaines de l'intelligence artificielle (IA) et de l'apprentissage automatique (machine learning).
+
+11. **Digital Marketer** : Bien qu'il puisse sembler sortir du domaine purement technologique, le marketing numérique utilise souvent des compétences techniques pour optimiser les efforts de marketing en ligne, y compris la stratégie SEO, l'analyse web, et l'utilisation d'outils de marketing automatisé.
+
+Ce ne sont que quelques exemples parmi tant d'autres. Le domaine de la tech est en constante évolution, créant ainsi de nouvelles opportunités professionnelles. Les métiers de la tech offrent souvent un fort potentiel de croissance et d'évolution, surtout pour ceux qui ont une passion pour l'innovation et qui sont motivés par les défis technologiques.
+2026-11-10 19:50:34,704 - INFO - Ajout au corpus: Q: je suis étudiant  et je ne sais pas quelles études choisirs, dis moi ce que je peux faire pour m'orienter ? R: Choisir une voie éducative est une décision importante qui peut grandement influencer votre carrière future. Lorsque vous êtes un étudiant et que vous hésitez entre différentes options d'études, il existe plusieurs approches et ressources que vous pouvez utiliser pour vous aider à vous orienter :
+
+### 1. **Auto-évaluation**
+Avant de prendre une décision, prenez le temps de réfléchir à vos intérêts, compétences, valeurs et objectifs à long terme. Considérez ce qui vous passionne vraiment et où se situent vos forces. Les tests d'orientation professionnelle peuvent être un bon point de départ pour identifier les domaines qui correspondent le mieux à votre personnalité et à vos aspirations.
+
+### 2. **Recherche sur les Carrières**
+Explorez différentes carrières en tenant compte des métiers de la tech mentionnés précédemment ou dans d'autres domaines qui vous intéressent. Utilisez des ressources comme des sites web dédiés à l'orientation professionnelle, des bases de données d'offres d'emploi, et des entretiens avec des professionnels pour en savoir plus sur les différentes options disponibles.
+
+### 3. **Consultation Professionnelle**
+N'hésitez pas à consulter un conseiller en orientation professionnelle. Les conseils peuvent vous fournir une analyse approfondie de votre profil personnel et vous aider à choisir une voie qui s'aligne avec vos intérêts et capacités. Ils peuvent également offrir des informations sur les exigences spécifiques pour certaines carrières.
+
+### 4. **Réseautage**
+Parlez aux personnes que vous connaissez, telles que amis, parents, enseignants ou professionnels du secteur qui vous intéresse. Les réseaux personnels peuvent fournir des insights précieux sur ce que les différentes voies d'études impliquent dans la pratique.
+
+### 5. **Stages et Observations de Terrain**
+Si possible, essayez de vivre une expérience de terrain avant de prendre une décision finale. Un stage ou un job d'été lié au domaine qui vous intéresse peut être une excellente manière d'évaluer si cela correspond à vos attentes.
+
+### 6. **Évaluation des Marchés du Travail**
+Recherchez sur le marché du travail actuel et futur pour voir quels domaines sont en demande. Des études de marché peuvent vous donner un aperçu de la stabilité et des opportunités d'avenir dans différents secteurs.
+
+### 7. **Réflexion sur Vos Valeurs Personnelles**
+Envisagez ce qui est important pour vous dans une carrière : l'équilibre entre vie professionnelle et personnelle, le type de travail (indépendant vs employé), le contexte culturel et environnemental du travail, etc. Assurez-vous que votre choix d'études correspond à ces valeurs.
+
+### 8. **Réflexion sur la Flexibilité**
+Certaines voies éducatives peuvent offrir plus de flexibilité pour changer de direction ultérieurement. Par exemple, une formation générale en informatique pourrait ouvrir plusieurs portes dans le domaine technologique.
+
+Choisir l'orientation professionnelle est un processus qui peut nécessiter du temps et de la réflexion. Il est important de prendre votre temps pour considérer toutes les options avant de prendre une décision définitive. N'oubliez pas que c'est tout à fait normal d'avoir des incertitudes ou même de changer d'idée après avoir entrepris vos études et travaillé dans un domaine.
+
+### Conclusion
+L'orientation professionnelle est une étape cruciale dans la vie académique et carrière. En utilisant ces ressources et approches, vous pouvez prendre une décision plus éclairée sur votre chemin d'étude. N'oubliez pas que l'éducation est un investissement dans votre avenir, alors choisissez ce qui vous inspire le mieux et vous donne de bonnes perspectives pour les années à venir.
+2026-11-10 19:56:56,452 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-10 19:56:56,452 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-10 20:03:25,375 - INFO - Ajout au corpus: Q: salut R: salut ! comment tu vas ?
+2026-11-10 20:04:14,578 - INFO - Ajout au corpus: Q: Combien font 10 + 12 R: Cela fait 22.
+2026-11-10 20:05:24,462 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-10 20:05:24,462 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-10 20:06:42,556 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-10 20:06:42,556 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-10 20:13:56,775 - INFO - Ajout au corpus: Q: salut R: Prêt à faire un projet ?
+2026-11-10 20:36:09,803 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-10 20:36:09,803 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-10 20:40:24,614 - ERROR - Erreur lors de l'entraînement: Expected all tensors to be on the same device, but got index is on cpu, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA__index_select)
+2026-11-10 20:47:24,764 - ERROR - Erreur lors de l'entraînement: Expected all tensors to be on the same device, but got index is on cpu, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA__index_select)
+2026-11-10 20:47:29,718 - ERROR - Erreur lors de l'entraînement: Expected all tensors to be on the same device, but got index is on cpu, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA__index_select)
+2026-11-10 20:47:31,329 - ERROR - Erreur lors de l'entraînement: Expected all tensors to be on the same device, but got index is on cpu, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA__index_select)
+2026-11-10 20:47:34,821 - ERROR - Erreur lors de l'entraînement: Expected all tensors to be on the same device, but got index is on cpu, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA__index_select)
+2026-11-11 17:17:28,133 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 17:17:28,134 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 17:17:54,196 - ERROR - Erreur lors de l'entraînement: Expected all tensors to be on the same device, but got index is on cpu, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA__index_select)
+2026-11-11 17:19:15,330 - INFO - Imported existing <module 'comtypes.gen' from 'c:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 17:19:15,331 - INFO - Using writeable comtypes cache directory: 'c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 17:19:26,065 - ERROR - Erreur lors de l'entraînement: Expected all tensors to be on the same device, but got index is on cpu, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA__index_select)
+2026-11-11 17:20:44,459 - ERROR - Erreur lors de l'entraînement: Expected all tensors to be on the same device, but got index is on cpu, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA__index_select)
+2026-11-11 17:41:17,743 - ERROR - Erreur lors de l'entraînement
+Traceback (most recent call last):
+  File "<ipython-input-4-5248ee314322>", line 257, in _train
+    self.training_stopped = self.model.train(
+                            ~~~~~~~~~~~~~~~~^
+        **TRAINING_PARAMS,
+        ^^^^^^^^^^^^^^^^^^
+        on_progress=on_progress,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+        stop_event=self.stop_training_event
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: GPT.train() got an unexpected keyword argument 'on_progress'
+2026-11-11 17:41:40,766 - ERROR - Erreur lors de l'entraînement
+Traceback (most recent call last):
+  File "<ipython-input-4-5248ee314322>", line 257, in _train
+    self.training_stopped = self.model.train(
+                            ~~~~~~~~~~~~~~~~^
+        **TRAINING_PARAMS,
+        ^^^^^^^^^^^^^^^^^^
+        on_progress=on_progress,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+        stop_event=self.stop_training_event
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: GPT.train() got an unexpected keyword argument 'on_progress'
+2026-11-11 17:42:05,542 - ERROR - Erreur lors de l'entraînement
+Traceback (most recent call last):
+  File "<ipython-input-4-5248ee314322>", line 257, in _train
+    self.training_stopped = self.model.train(
+                            ~~~~~~~~~~~~~~~~^
+        **TRAINING_PARAMS,
+        ^^^^^^^^^^^^^^^^^^
+        on_progress=on_progress,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+        stop_event=self.stop_training_event
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: GPT.train() got an unexpected keyword argument 'on_progress'
+2026-11-11 17:49:35,065 - ERROR - Erreur lors de l'entraînement
+Traceback (most recent call last):
+  File "C:\Users\chevr\Desktop\FIchiers\Quark\Scripts\IAM.py", line 277, in _train
+    inspect.getfile(type(self.model))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\package\package_importer.py", line 742, in _patched_getfile
+    return _orig_getfile(object)
+  File "C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\inspect.py", line 861, in getfile
+    raise OSError('source code not available')
+OSError: source code not available
+2026-11-11 17:50:13,503 - WARNING - Le moteur GPT chargé (module non résolu) ne prend pas en charge on_progress; redémarrez l'application pour charger la version à jour.
+2026-11-11 17:50:25,068 - WARNING - Le moteur GPT chargé (module non résolu) ne prend pas en charge on_progress; redémarrez l'application pour charger la version à jour.
+2026-11-11 17:51:01,356 - WARNING - Le moteur GPT chargé (c:\Users\chevr\Desktop\FIchiers\Quark\Scripts\pyAI.py) ne prend pas en charge on_progress; redémarrez l'application pour charger la version à jour.
+2026-11-11 17:51:01,373 - ERROR - Erreur lors de l'entraînement
+Traceback (most recent call last):
+  File "<ipython-input-5-1ab7f6d23a87>", line 294, in _train
+    self.training_stopped = self.model.train(**TRAINING_PARAMS, **train_options)
+                            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chevr\Desktop\FIchiers\Quark\Scripts\pyAI.py", line 417, in train
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "c:\Users\chevr\Desktop\FIchiers\Quark\Scripts\pyAI.py", line 184, in forward
+    token_embeddings = self.token_embedding(indices)
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\sparse.py", line 189, in forward
+    return F.embedding(
+           ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<5 lines>...
+        self.sparse,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\functional.py", line 2621, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Expected all tensors to be on the same device, but got index is on cpu, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA__index_select)
+2026-11-11 17:52:43,784 - WARNING - Le moteur GPT chargé (c:\Users\chevr\Desktop\FIchiers\Quark\Scripts\pyAI.py) ne prend pas en charge on_progress; redémarrez l'application pour charger la version à jour.
+2026-11-11 17:52:43,802 - ERROR - Erreur lors de l'entraînement
+Traceback (most recent call last):
+  File "<ipython-input-5-1ab7f6d23a87>", line 294, in _train
+    self.training_stopped = self.model.train(**TRAINING_PARAMS, **train_options)
+                            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chevr\Desktop\FIchiers\Quark\Scripts\pyAI.py", line 417, in train
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "c:\Users\chevr\Desktop\FIchiers\Quark\Scripts\pyAI.py", line 184, in forward
+    token_embeddings = self.token_embedding(indices)
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\sparse.py", line 189, in forward
+    return F.embedding(
+           ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<5 lines>...
+        self.sparse,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\functional.py", line 2621, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Expected all tensors to be on the same device, but got index is on cpu, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA__index_select)
+2026-11-11 17:53:34,917 - WARNING - Le moteur GPT chargé (c:\Users\chevr\Desktop\FIchiers\Quark\Scripts\pyAI.py) ne prend pas en charge on_progress; redémarrez l'application pour charger la version à jour.
+2026-11-11 17:53:34,945 - ERROR - Erreur lors de l'entraînement
+Traceback (most recent call last):
+  File "<ipython-input-5-1ab7f6d23a87>", line 294, in _train
+    self.training_stopped = self.model.train(**TRAINING_PARAMS, **train_options)
+                            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chevr\Desktop\FIchiers\Quark\Scripts\pyAI.py", line 417, in train
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "c:\Users\chevr\Desktop\FIchiers\Quark\Scripts\pyAI.py", line 184, in forward
+    token_embeddings = self.token_embedding(indices)
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\sparse.py", line 189, in forward
+    return F.embedding(
+           ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<5 lines>...
+        self.sparse,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\functional.py", line 2621, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Expected all tensors to be on the same device, but got index is on cpu, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA__index_select)
+2026-11-11 17:59:24,696 - WARNING - Le moteur GPT chargé (c:\Users\chevr\Desktop\FIchiers\Quark\Scripts\pyAI.py) ne prend pas en charge on_progress; redémarrez l'application pour charger la version à jour.
+2026-11-11 17:59:24,714 - ERROR - Erreur lors de l'entraînement
+Traceback (most recent call last):
+  File "<ipython-input-7-1ab7f6d23a87>", line 294, in _train
+    self.training_stopped = self.model.train(**TRAINING_PARAMS, **train_options)
+                            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chevr\Desktop\FIchiers\Quark\Scripts\pyAI.py", line 417, in train
+    f"batch_size={batch_size}, max_steps={max_steps}"
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "c:\Users\chevr\Desktop\FIchiers\Quark\Scripts\pyAI.py", line 184, in forward
+    token_embeddings = self.token_embedding(indices)
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\sparse.py", line 189, in forward
+    return F.embedding(
+           ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<5 lines>...
+        self.sparse,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\functional.py", line 2621, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Expected all tensors to be on the same device, but got index is on cpu, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA__index_select)
+2026-11-11 17:59:57,891 - WARNING - Le moteur GPT chargé (c:\Users\chevr\Desktop\FIchiers\Quark\Scripts\pyAI.py) ne prend pas en charge on_progress; redémarrez l'application pour charger la version à jour.
+2026-11-11 17:59:57,908 - ERROR - Erreur lors de l'entraînement
+Traceback (most recent call last):
+  File "<ipython-input-7-1ab7f6d23a87>", line 294, in _train
+    self.training_stopped = self.model.train(**TRAINING_PARAMS, **train_options)
+                            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chevr\Desktop\FIchiers\Quark\Scripts\pyAI.py", line 417, in train
+    f"batch_size={batch_size}, max_steps={max_steps}"
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "c:\Users\chevr\Desktop\FIchiers\Quark\Scripts\pyAI.py", line 184, in forward
+    token_embeddings = self.token_embedding(indices)
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\modules\sparse.py", line 189, in forward
+    return F.embedding(
+           ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<5 lines>...
+        self.sparse,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\torch\nn\functional.py", line 2621, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Expected all tensors to be on the same device, but got index is on cpu, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA__index_select)
+2026-11-11 18:02:00,702 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 18:02:00,702 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 18:05:01,317 - INFO - Ajout au corpus: Q: salut R: Salut !
+2026-11-11 18:05:30,698 - INFO - Ajout au corpus: Q: combien fait 2+2 ? R: cela fait 4
+2026-11-11 18:06:36,716 - INFO - Ajout au corpus: Q: combien de doigts a un être humain R: Un être humain possède 5 doigts par main ce qui fait 10 doigts.
+2026-11-11 18:08:11,738 - INFO - Ajout au corpus: Q: A quelle heure correspond midi ? R: cela correspond à 12H00 ou en anglais 12 am.
+2026-11-11 18:08:52,714 - INFO - Ajout au corpus: Q: Comment t'appelles-tu ? R: Je m'appel Quark !
+2026-11-11 18:14:02,082 - INFO - Ajout au corpus: Q: salut R: salut comment tu vas ?
+2026-11-11 18:16:13,290 - INFO - Ajout au corpus: Q: salut R: Salut je suis Quark, si tu as besoin d'aide, dis le moi.
+2026-11-11 18:18:57,339 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 18:18:57,339 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 18:28:37,569 - INFO - Ajout au corpus: Q: salut R: Salut utilisateur ! que puis-je faire pour toi ?
+2026-11-11 18:31:48,698 - INFO - Ajout au corpus: Q: tu vas bien ? R: Je suis une IA donc je n'ai pas le retour nécessaire pour savoir comment je vais mais je suppose que je vais bien.
+2026-11-11 18:40:39,779 - INFO - Ajout au corpus: Q: Connais-tu la célébre série "the mentalist" ? R: Bien sûr,dans cette série, le protagoniste Patrique Jane cherche à ce venger d'un tueur en série et pour cela il rejoint une équipe de police (la CBI) et nous suivons sont parcours dans un ensemble d'enquêtes. C'est une très bonne série !
+2026-11-11 18:41:34,572 - INFO - Ajout au corpus: Q: cc cv? R: Salut ! je me porte comme une IA ui va bien ! Et toi ?
+2026-11-11 18:51:31,926 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 18:51:31,926 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 19:04:48,491 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 19:04:48,491 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 19:10:45,965 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 19:10:45,965 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 19:17:20,976 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 19:17:20,976 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 19:32:11,347 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 19:32:11,347 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 19:43:54,270 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 19:43:54,271 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 19:50:51,860 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 19:50:51,860 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 19:58:12,079 - INFO - Ajout au corpus: Q: salut R: Salut je suis Quark.
+2026-11-11 20:00:07,813 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 20:00:07,813 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 20:04:22,520 - INFO - Ajout au corpus: Q: salut R: Bonjour comment vas-tu ?
+2026-11-11 20:10:02,126 - INFO - Ajout au corpus: Q: salut R: Salut utilisateur comment vas-tu ?
+2026-11-11 20:11:10,477 - INFO - Ajout au corpus: Q: combien fait 2+2 ? R: Cela fait 4.
+2026-11-11 20:13:03,861 - ERROR - Erreur lors de l'entraînement
+Traceback (most recent call last):
+  File "c:\Users\chevr\Desktop\FIchiers\Quark\Scripts\IAM.py", line 359, in _train
+    self.training_stopped = self.model.train(**TRAINING_PARAMS, **train_options)
+                            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chevr\Desktop\FIchiers\Quark\Scripts\pyAI.py", line 430, in train
+    input_batch, target_batch = get_batch("train", batch_size)
+                                ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chevr\Desktop\FIchiers\Quark\Scripts\pyAI.py", line 375, in get_batch
+    torch.stack(input_rows).to(self.device),
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+torch.AcceleratorError: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+The CUDA driver logged these messages, which may provide useful details:
+Returning 710 (CUDA_ERROR_ASSERT) from cuStreamSynchronize
+
+
+2026-11-11 20:15:15,988 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 20:15:15,989 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 20:16:44,586 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 20:16:44,587 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 20:19:53,378 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 20:19:53,378 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 20:20:49,663 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 20:20:49,663 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 20:25:35,509 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 20:25:35,510 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 20:26:11,667 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 20:26:11,668 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 20:27:50,519 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 20:27:50,520 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 20:28:17,540 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 20:28:17,541 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 20:29:18,635 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 20:29:18,635 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 20:30:40,020 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 20:30:40,021 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 20:33:56,491 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 20:33:56,491 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 20:53:45,276 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 20:53:45,277 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 20:55:46,253 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 20:55:46,254 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 21:05:28,449 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 21:05:28,449 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 21:05:53,967 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 21:05:53,967 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 21:06:14,279 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 21:06:14,280 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 21:06:44,771 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 21:06:44,772 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 21:08:14,503 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 21:08:14,503 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 21:08:37,360 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 21:08:37,360 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-11 21:17:56,344 - INFO - Ajout au corpus: Q: salut R: Bonjour !
+2026-11-11 21:18:24,008 - INFO - Ajout au corpus: Q: salut R: Bonjour utilisateur.
+2026-11-11 21:18:54,319 - INFO - Ajout au corpus: Q: Bonjour R: Bonjour comment vas-tu.
+2026-11-11 21:20:05,096 - INFO - Ajout au corpus: Q: Salut R: Salut comment vas-tu ? As tu besoin d'aide.
+2026-11-11 21:20:38,556 - INFO - Ajout au corpus: Q: Bien le bonjour R: Bonjour, comment puis-je t'aider ?
+2026-11-11 21:21:04,999 - INFO - Ajout au corpus: Q: bonjour R: Bonjour, comment puis-je t'aider ?
+2026-11-11 23:05:10,536 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 23:05:10,536 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-12 16:54:50,257 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-12 16:54:50,260 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-18 17:23:24,229 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-18 17:23:24,238 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-18 17:23:27,610 - INFO - Could not import comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4: Typelib different than module
+2026-11-18 17:23:27,626 - INFO - # Generating comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4
+2026-11-18 17:23:27,877 - INFO - # Generating comtypes.gen.SpeechLib
+2026-11-21 19:18:27,515 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-21 19:18:27,516 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-21 19:31:31,405 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-21 19:31:31,405 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-21 19:32:08,729 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-21 19:32:08,729 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-21 19:36:16,449 - INFO - Ajout au corpus: Q: salut R: Bonjour utilisateur, qu'allons-nous faire aujourd'hui ?
+2026-11-21 22:48:07,201 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-21 22:48:07,202 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-22 16:28:12,802 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-22 16:28:12,803 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-22 16:37:52,205 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-22 16:37:52,205 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-22 16:48:54,617 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-22 16:48:54,618 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-25 14:01:45,853 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-25 14:01:45,860 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-25 14:32:44,695 - INFO - Ajout au corpus: Q: salut R: Salut, que comptes-tu faire aujourd'hui ?
+2026-11-25 14:33:45,649 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-25 14:33:45,650 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-25 14:44:41,162 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-25 14:44:41,162 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'

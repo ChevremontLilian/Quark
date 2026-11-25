@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iam-neural-interface"
+version = "0.1.0"
+description = "Interface locale d'apprentissage et de dialogue IAM"
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "sentencepiece",
+    "psutil",
+    "pyttsx3",
+    "comtypes; sys_platform == 'win32'",
+]
+
+[project.scripts]
+iam = "Scripts.IAM:main"
+
+[tool.setuptools]
+packages = ["Scripts"]
