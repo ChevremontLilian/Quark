@@ -7,6 +7,12 @@ from Scripts.pyAI import GPT, _encode_with_special_tokens
 
 
 class StubTokenizer:
+    def pad_id(self):
+        return 0
+
+    def unk_id(self):
+        return 1
+
     def bos_id(self):
         return 2
 

@@ -21,8 +21,8 @@ de fondation.
 | Blocs | `Scripts/TransformerBlock.py`, `OptimizedTransformerBlock` |
 | Configuration | `Scripts/config.py` |
 | Corpus Q/R actif | `data/corpus_principal.txt` |
-| Tokenizer | SentencePiece BPE, 1 024 pièces demandées |
-| Checkpoint configuré | `Models/Reason.pth` |
+| Tokenizer actif | SentencePiece BPE, 1 024 pièces; réentraînement cible 2 048 |
+| Checkpoint configuré | `Models/Reason.pth`; ancienne copie `Models/Reason-legacy.pth` |
 | Tests | `tests/`, lancés avec `python -m unittest discover -s tests` |
 
 Le corpus actif est composé de lignes `Q: question R: réponse`. Le chargeur
@@ -36,59 +36,57 @@ chaînes littérales insérées dans les lignes Q/R.
 
 - Modèle auto-régressif de type Transformer décodeur; objectif de prédiction du
   prochain token.
-- Fenêtre de contexte : 200 tokens; embedding : 128 dimensions; 4 têtes et
-  4 blocs.
-- Chaque bloc optimisé combine une attention multi-têtes causale, un MLP à rang
-  faible (rang 16), des connexions résiduelles et des LayerNorm.
-- Les blocs ajoutent 64 vecteurs de mémoire appris et 4 vecteurs de réflexion
-  appris comme préfixe avant l'attention. Ce sont des paramètres appris, pas une
-  mémoire de conversation persistante ni une preuve de raisonnement explicite.
-- Le dropout configuré est de 0,1. Les gradients sont écrêtés à une norme de
-  1,0.
+- Nouvelle configuration: contexte 256, embedding 256, 8 têtes, 4 blocs,
+  dropout 0,1; le tokenizer actuellement présent conserve 1 024 IDs.
+- Attention SDPA avec une projection QKV fusionnée et un masque causal booléen.
+  Les vecteurs prefix K/V appris sont directement organisés par tête (64
+  emplacements mémoire et 4 réflexion); ils ne sont pas concaténés à la
+  séquence. Ils ne constituent ni une mémoire de conversation ni une preuve de
+  raisonnement explicite.
+- MLP standard `d → 4d → d` avec GELU, connexions résiduelles et LayerNorm.
+  L'initialisation suit std 0,02 avec mise à l'échelle des projections
+  résiduelles; les embeddings d'entrée et la tête de sortie partagent leurs poids.
+- Les dimensions changent les clés/formes du checkpoint. `Reason.pth` est
+  conservé sans modification et ne se charge pas dans cette architecture; sa
+  copie de sauvegarde est `Reason-legacy.pth`.
 
 ## 2. Données, tokenisation et séquences
 
 ### Tokenizer actuellement configuré
 
-`GPT.load_corpus()` entraîne SentencePiece sur le corpus et configure :
+`GPT.load_corpus()` charge `Models/tokenizer.model` sans le réentraîner. Le
+réentraînement est une option explicite (`retrain_tokenizer=True`) et requiert
+une nouvelle instance GPT afin de ne pas désaligner les poids :
 
-- BPE, vocabulaire demandé de 1 024 pièces et couverture des caractères de 1,0;
+- BPE, modèle présent de 1 024 pièces; un nouveau tokenizer demanderait 2 048
+  pièces et utilise `hard_vocab_limit=False`;
 - IDs spéciaux PAD=0, UNK=1, BOS=2 et EOS=3;
 - normalisation SentencePiece par défaut `nmt_nfkc`;
-- chaque enregistrement est encodé puis son EOS est ajouté explicitement;
-- le padding PAD est ignoré dans la cross-entropy.
+- prompt d'entraînement et prompt de chat identiques: `BOS + "Q: {q} R:"`;
+- réponse encodée avec son espace initial, suivie d'EOS.
 
-Le code vérifie désormais les IDs spéciaux après chargement, encode chaque
-séquence d'entraînement sous la forme `BOS + texte + EOS`, utilise BOS au début
-du prompt de chat, arrête la génération sur EOS et masque la perte via
-`tokenizer.pad_id()`. Un essai temporaire sur le corpus actif a confirmé les
-IDs `(0, 1, 2, 3)`, un vocabulaire effectif de 1 024 pièces et une longueur
-maximale observée de 189 tokens, marqueurs compris. La segmentation SentencePiece
-peut varier avec le tokenizer entraîné.
-
-**Point de vigilance :** le chargement actuel réentraîne le tokenizer et
-remplace `tokenizer.model` avant de charger le checkpoint. Même si la taille du
-vocabulaire et les IDs spéciaux restent identiques, cela ne prouve pas que
-chaque ID représente le même sous-token que lors de l'entraînement du
-checkpoint. Une divergence d'indexation est une hypothèse à vérifier quand les
-sorties sont incohérentes; elle n'est pas démontrée par la seule présence de
-sous-tokens dans une sortie. Pour une expérience reproductible, comparer le
-tokenizer exact associé au checkpoint (par exemple empreinte du fichier et
-vocabulaire), pas seulement sa taille.
+La perte ignore le prompt par défaut et utilise `-100` pour le prompt masqué
+ainsi que pour PAD. La génération démarre de BOS, interdit PAD/UNK/BOS et
+s'arrête sur EOS. Le tokenizer est un artefact séparé du checkpoint : une
+égalité de taille ou d'IDs spéciaux ne garantit pas une égalité des associations
+ID↔pièce.
 
 ### Construction des lots
 
 Chaque séquence correspond à un enregistrement Q/R. Les questions normalisées
 sont gardées dans une seule partition train ou validation pour limiter la
-fuite d'exemples presque identiques. Les lots prennent des séquences
-indépendantes, les tronquent à la fenêtre de contexte et les complètent avec
-PAD. La cible est le token suivant.
+fuite d'exemples presque identiques. Les séquences sont tokenisées et paddées
+une fois sur le périphérique; les indices sont groupés par longueur et chaque
+lot est coupé à sa longueur maximale effective. Les positions PAD ne participent
+pas à la perte. Les lignes invalides sont ignorées avec un avertissement et le
+bruit connu (`mentirondelic` et gabarits exacts) est compté et filtré. Le
+corpus source n'est pas modifié; `python -m Scripts.corpus_audit` liste les
+candidats suspects et les questions ayant de nombreuses variantes.
 
-Le générateur échantillonne à chaque position avec une softmax complète et
-`torch.multinomial`, et s'arrête lorsqu'il produit EOS. Il n'applique
-actuellement ni température, ni top-k, ni top-p. Ces paramètres peuvent changer
-la lisibilité, mais ne corrigent pas une incompatibilité entre checkpoint et
-tokenizer.
+Le générateur utilise `eval()` et `no_grad()`, une température par défaut 0,7,
+top-k 40 et un maximum par défaut de 160 tokens. Il restaure le mode du modèle
+après génération. La sortie du chat ne contient que la réponse et n'est pas
+coupée au caractère `!`.
 
 ## 3. Notions ML utiles au diagnostic
 
@@ -137,21 +135,30 @@ modifier la taille du vocabulaire.
 
 ### Optimisation et régularisation dans Quark
 
-Les valeurs de référence définies dans `Scripts/config.py` sont notamment :
-batch size 8, évaluation toutes les 250 étapes, patience 8, maximum 10 000
-updates et 50 lots par estimation. Le taux de base du modèle est `1e-4`.
+Les valeurs de départ définies dans `Scripts/config.py` sont : batch size 32,
+évaluation toutes les 250 étapes, patience 6, maximum 6 000 updates,
+20 lots d'évaluation et taux d'apprentissage `5e-4`. Le seuil de convergence
+est 0,1; les deux dictionnaires `MODEL_PARAMS` et `TRAINING_PARAMS` centralisent
+ces valeurs.
 
-La boucle utilise désormais :
+La boucle utilise :
 
-1. AdamW;
+1. AdamW avec betas `(0.9, 0.95)` et `fused=True` sur CUDA;
 2. un warm-up linéaire de 5 % du nombre d'étapes, plafonné à 500 étapes
-   (500 étapes avec la configuration de référence);
+   (300 étapes pour 6 000 updates);
 3. une décroissance cosinus jusqu'à 10 % du taux de base;
-4. un weight decay de `0.05` sur les paramètres de dimension supérieure à 1,
-   et `0.0` sur les vecteurs 1D (notamment biais et échelles de normalisation).
+4. un weight decay de `0.05` sur les matrices seulement; biais, LayerNorm et
+   préfixes K/V sont exclus;
+5. autocast bf16 sur CUDA quand le périphérique le prend en charge.
 
 Le warm-up est défini en **updates d'optimiseur**, pas en époques. Une étape
 signifie un lot traité et une mise à jour des poids.
+
+La boucle conserve/restaure le meilleur état évalué, sauvegarde atomiquement
+par fichier temporaire puis `os.replace`, et ne sauvegarde pas les poids
+courants moins bons lors d'un arrêt ou d'une exception. Une perte non finie
+déclenche une erreur explicite. Le journal d'évaluation rapporte aussi les
+tokens/s observés.
 
 ## 4. Lire les symptômes sans tirer de conclusions hâtives
 
@@ -198,16 +205,19 @@ l'attribution causale incertaine.
 
 ### Reproductibilité et limites actuelles
 
-- `load_corpus()` réentraîne le tokenizer; les checkpoints sauvegardent les
-  poids du modèle, pas l'état de l'optimiseur ni du scheduler.
+- `load_corpus()` ne réentraîne pas le tokenizer par défaut; les checkpoints
+  sauvegardent les poids du modèle, pas le tokenizer ni l'état de l'optimiseur
+  et du scheduler.
 - L'estimation train/validation échantillonne des lots; les valeurs ont donc
-  du bruit. Le split par groupe est déterministe, mais le sampling des lots ne
-  l'est pas nécessairement.
+  du bruit. Le split par groupe est déterministe, mais le sampling des lots et
+  leur bucketing ne l'est pas nécessairement.
 - Le protocole actuel possède un split train/validation, pas un jeu de test
   final distinct.
-- Un changement d'architecture peut rendre les anciens checkpoints
-  incompatibles. Vérifier les clés et formes d'état et prévoir une migration
-  explicite plutôt que masquer les erreurs.
+- La loss réponse-seule n'est pas directement comparable à la loss historique
+  qui inclut le prompt.
+- Les checkpoints de l'ancienne architecture sont incompatibles avec les
+  nouvelles formes; le chargement les signale et l'entraînement depuis zéro
+  reste disponible. L'ancien fichier est archivé, pas supprimé.
 - Les paramètres du modèle, tokenizer, corpus, seeds, versions logicielles,
   durée et nombre de tokens vus sont des métadonnées à conserver pour des
   comparaisons solides.
@@ -241,6 +251,52 @@ l'attribution causale incertaine.
   `.github/skills/quark-ai-research/SKILL.md`, qui impose la lecture du guide
   avant tout travail IA sur Quark.
 - Ajout de liens vers le guide et le skill dans le `README.md` racine.
+
+### 2026-11-26 — refonte du pipeline Q/R et essais courts
+
+- Le pipeline utilise maintenant des préfixes K/V appris, l'attention SDPA,
+  un MLP `d → 4d → d`, des poids liés et une initialisation GPT-2-like.
+  L'entraînement charge le tokenizer existant par défaut, masque le prompt et
+  PAD de la perte, groupe le split par question et restaure le meilleur état.
+- L'API d'entraînement est `fit()`; l'API `nn.Module.train()` reste disponible.
+  Le chat partage le prompt d'entraînement, génère la réponse seule et utilise
+  `eval()` / `no_grad()`. L'UI signale les checkpoints incompatibles et peut
+  lancer un entraînement depuis zéro.
+- Le checkpoint préexistant a été conservé; sa copie `Reason-legacy.pth`
+  possède le même SHA-256. Un chargement dans la nouvelle architecture échoue
+  explicitement avec un message d'incompatibilité, sans modifier l'original.
+- Mesures exploratoires sur NVIDIA RTX 4050 Laptop, PyTorch 2.15.0+cu134,
+  autocast bf16, corpus Q/R actif et split groupé. Les nouveaux essais ont
+  utilisé le seed 41, 100 updates et 20 lots d'évaluation. Les pertes sont des
+  pertes moyennes échantillonnées sur les tokens de réponse; `tokens vus`
+  exclut le padding.
+
+| Variante | Vocab. | Batch | LR | Tokens vus | Train loss | Val réponse | Tokens/s |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Baseline avant refonte (seed 42) | 1 024 | 8 | 1e-4 | non relevé | 6,3536 | 6,2974* | 32 464 |
+| Refonte, anciens hyperparamètres | 1 024 | 8 | 1e-4 | 31 157 | 6,3934 | 6,4006 | 16 307 |
+| Nouveau modèle, LR 3e-4 | 2 048 | 32 | 3e-4 | 105 126 | 5,5088 | 5,6001 | 74 187 |
+| Nouveau modèle, LR 5e-4 | 2 048 | 32 | 5e-4 | 105 126 | 5,3349 | 5,4315 | 20 862 |
+| Nouveau modèle, LR 1e-3 | 2 048 | 32 | 1e-3 | 105 126 | 5,1663 | 5,2675 | 17 417 |
+| Ablation mémoire K/V désactivée | 2 048 | 32 | 5e-4 | 102 874 | 5,3756 | 5,6360 | 15 041 |
+| Vocabulaire 1 024, budget rapproché | 1 024 | 29 | 5e-4 | 103 835 | 4,8835 | 4,9373 | 75 850 |
+
+`*` La baseline historique apprend aussi le prompt; sa loss de validation
+n'est donc pas comparable à la loss réponse-seule ci-dessus. L'ablation mémoire
+conserve batch et nombre d'updates, mais les lots aléatoires donnent un budget
+de tokens inférieur de 2,1 %. L'essai 1 024/2 048 rapproche le budget à 1,2 %
+près en ajustant le batch; la taille de batch n'est donc pas strictement
+identique. Les pertes sur des vocabulaires différents ne mesurent pas la même
+segmentation token.
+
+- Les valeurs train/validation de chaque run sont des mesures courtes,
+  mono-seed, pas des évaluations de qualité généralisable. Les tokens/s
+  observés ont varié fortement entre exécutions sur la même machine; aucune
+  accélération n'est revendiquée sans répétitions synchronisées et GPU au
+  repos. Aucun entraînement long ni jeu de test distinct n'a été exécuté.
+- `python -m unittest discover -s tests` : 19 tests réussis. `git diff --check`
+  passe également. Un test confirme que `loss_on_prompt=False` surcharge bien
+  le défaut du modèle; cette précision évite de réinclure le prompt par erreur.
 
 ## 7. Glossaire rapide
 

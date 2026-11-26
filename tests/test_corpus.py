@@ -53,6 +53,33 @@ class CorpusTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, r"corpus\.txt:1"):
                 load_qa_records(corpus_path)
 
+    def test_loader_can_skip_and_count_malformed_records(self):
+        with tempfile.TemporaryDirectory() as directory:
+            corpus_path = Path(directory) / "corpus.txt"
+            corpus_path.write_text(
+                "not a Q/R record\nQ: valide R: oui\n",
+                encoding="utf-8",
+            )
+
+            with self.assertWarnsRegex(RuntimeWarning, "Skipped 1 invalid"):
+                records = load_qa_records(corpus_path, skip_invalid=True)
+
+        self.assertEqual(len(records), 1)
+        self.assertEqual(records[0].question, "valide")
+
+    def test_loader_filters_known_noise_and_reports_count(self):
+        with tempfile.TemporaryDirectory() as directory:
+            corpus_path = Path(directory) / "corpus.txt"
+            corpus_path.write_text(
+                "Q: bruit R: mentirondelic\nQ: valide R: oui\n",
+                encoding="utf-8",
+            )
+
+            with self.assertWarnsRegex(RuntimeWarning, "Filtered 1"):
+                records = load_qa_records(corpus_path, filter_noise=True)
+
+        self.assertEqual([record.question for record in records], ["valide"])
+
     def test_cleaner_preserves_alternative_answers_and_removes_blank_lines(self):
         with tempfile.TemporaryDirectory() as directory:
             corpus_path = Path(directory) / "corpus.txt"
