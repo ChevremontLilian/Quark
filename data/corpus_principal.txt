@@ -16541,3 +16541,17 @@ Q: Bonjour, j'ai besoin de toi R: Bien sûr ! Je suis là pour vous aider.
 Q: Salut, j'ai besoin de toi R: Bonjour ! Je suis là pour vous aider. Comment
 Q: Coucou, , j'ai besoin de toi R: Bonjour ! Je suis là pour vous aider
 Q: salut R: Salut, que comptes-tu faire aujourd'hui ?
+Q: salut R: Bonjour ! Comment puis-je vous aider.
+Q: comment tu vas ? R: En tant qu'IA je n'ai pas vraiment de sensation mais je suppose que je vais bien !
+Q: combien fait 2+2 ? R: 2 + 2 est égal à 4.
+Q: très bien et toi ? R: Je vais bien, merci ! Alors que fait-on ?
+Q: salut R: Salut, utilisateur !
+Q: comment tu vas ? R: Je me considère comme étant une IA qui va bien, merci de demander !
+Q: quelle est la capitale de la France ? R: La capitale de la France porte le nom de 'Paris'.
+Q: qui est gandalf ? R: C'est un sorcier très connu, il fait parti des principaux personnages de la série dénommée : Le seigneur des anneaux.
+Q: Qui suis-je ? R: Vous êtes l'utilisateur qui me questionne en ce moment même.
+Q: Quelle est la capitale de l'Espagne ? R: La capitale de l'Espagne est Madrid.
+Q: Qui a écrit Roméo et Juliette ? R: Le célèbre William Shakespear !
+Q: Comment désactiver une interface via la cli d'un routeur Cisco ? R: Il suffit de vous placer dans sur l'interface que vous voulez désactiver exemple: ``` router>enable \n router#conf t \n router(config)#interface G0/0 \n router(config-if)#shutdown```
+Q: QUel est la capital de la france R: J'en déduis que vous me demandez la capitale de la France, la capitale de la France est Paris.
+Q: Qui a écrit Roméo et Juliette R: William Shakespear.

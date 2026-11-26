@@ -9,6 +9,7 @@ import random
 import re
 import tempfile
 import unicodedata
+import warnings
 
 if __package__:
     from .config import CORPUS_MAIN
@@ -17,6 +18,11 @@ else:
 
 
 _RECORD_PATTERN = re.compile(r"^Q:\s*(.*?)\s+R:\s*(.*)$")
+_KNOWN_NOISE_PATTERNS = (
+    re.compile(r"\bmentirondelic\b", re.IGNORECASE),
+    re.compile(r"l['’]X est résultat de l['’]action de Y ou qualité de Y", re.IGNORECASE),
+    re.compile(r"\bJe vais X cette tâche\b", re.IGNORECASE),
+)
 
 
 @dataclass(frozen=True)
@@ -63,10 +69,12 @@ def question_group_key(question):
     return normalize_text(question).casefold()
 
 
-def load_qa_records(path, deduplicate=False):
-    """Parse non-empty Q/R lines and optionally remove identical Q/R pairs."""
+def load_qa_records(path, deduplicate=False, skip_invalid=False, filter_noise=False):
+    """Parse Q/R lines, optionally skipping malformed rows and known noise."""
     records = []
     seen_pairs = set()
+    invalid_lines = []
+    noisy_lines = []
     path = Path(path)
 
     with path.open("r", encoding="utf-8-sig") as corpus_file:
@@ -76,16 +84,27 @@ def load_qa_records(path, deduplicate=False):
 
             match = _RECORD_PATTERN.fullmatch(raw_line.strip())
             if match is None:
-                raise ValueError(
-                    f"{path}:{line_number}: expected one 'Q: ... R: ...' record"
-                )
+                message = f"{path}:{line_number}: expected one 'Q: ... R: ...' record"
+                if not skip_invalid:
+                    raise ValueError(message)
+                invalid_lines.append(message)
+                continue
 
             question = normalize_text(match.group(1))
             answer = normalize_text(match.group(2))
             if not question or not answer:
-                raise ValueError(
-                    f"{path}:{line_number}: question and answer must not be empty"
-                )
+                message = f"{path}:{line_number}: question and answer must not be empty"
+                if not skip_invalid:
+                    raise ValueError(message)
+                invalid_lines.append(message)
+                continue
+
+            if filter_noise and any(
+                pattern.search(f"{question} {answer}")
+                for pattern in _KNOWN_NOISE_PATTERNS
+            ):
+                noisy_lines.append(line_number)
+                continue
 
             pair = (question, answer)
             if deduplicate and pair in seen_pairs:
@@ -93,6 +112,20 @@ def load_qa_records(path, deduplicate=False):
             seen_pairs.add(pair)
             records.append(QARecord(question, answer, line_number))
 
+    if invalid_lines:
+        warnings.warn(
+            f"Skipped {len(invalid_lines)} invalid corpus line(s); "
+            f"first: {invalid_lines[0]}",
+            RuntimeWarning,
+            stacklevel=2,
+        )
+    if noisy_lines:
+        warnings.warn(
+            f"Filtered {len(noisy_lines)} known noisy corpus record(s); "
+            f"line(s): {', '.join(map(str, noisy_lines[:10]))}",
+            RuntimeWarning,
+            stacklevel=2,
+        )
     if not records:
         raise ValueError(f"{path}: corpus contains no question/answer records")
     return records

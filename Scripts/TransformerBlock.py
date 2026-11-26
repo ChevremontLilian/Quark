@@ -99,7 +99,7 @@ class FeedForward(nn.Module):
         super().__init__()
         self.reseau = nn.Sequential(
             nn.Linear(dimension_embedding, 4 * dimension_embedding),
-            nn.ReLU(),
+            nn.GELU(),
             nn.Dropout(dropout_rate),
             nn.Linear(4 * dimension_embedding, dimension_embedding)
         )
@@ -160,7 +160,15 @@ class SharedMultiHeadAttention(nn.Module):
     Réduit le nombre de paramètres en partageant les couches linéaires entre les têtes.
     """
 
-    def __init__(self, dimension_embedding, taille_bloc, nb_tetes):
+    def __init__(
+        self,
+        dimension_embedding,
+        taille_bloc,
+        nb_tetes,
+        dropout_rate=0.1,
+        memory_size=64,
+        num_reflection_tokens=4,
+    ):
         """
         Args:
             dimension_embedding (int): dimension des vecteurs d'entrée/sortie.
@@ -172,11 +180,20 @@ class SharedMultiHeadAttention(nn.Module):
         self.dimension_embedding = dimension_embedding
         self.nb_tetes = nb_tetes
         self.taille_tete = taille_tete
-
-        # Projection partagée pour Q, K, V
+        self.memory_size = memory_size
+        self.num_reflection_tokens = num_reflection_tokens
+        self.dropout_rate = dropout_rate
         self.shared_proj = nn.Linear(dimension_embedding, 3 * dimension_embedding, bias=False)
         self.projection = nn.Linear(dimension_embedding, dimension_embedding)
-        self.register_buffer('triangle_inferieur', torch.tril(torch.ones(taille_bloc, taille_bloc)))
+        prefix_size = memory_size + num_reflection_tokens
+        self.prefix_k = nn.Parameter(
+            torch.empty(1, nb_tetes, prefix_size, taille_tete)
+        )
+        self.prefix_v = nn.Parameter(
+            torch.empty(1, nb_tetes, prefix_size, taille_tete)
+        )
+        nn.init.normal_(self.prefix_k, mean=0.0, std=0.02)
+        nn.init.normal_(self.prefix_v, mean=0.0, std=0.02)
 
     def forward(self, x):
         """
@@ -188,61 +205,37 @@ class SharedMultiHeadAttention(nn.Module):
         """
         batch, seq_len, _ = x.shape
 
-        # Projection partagée pour Q, K, V
-        qkv = self.shared_proj(x)  # (batch, seq_len, 3 * dimension_embedding)
-        qkv = qkv.chunk(3, dim=-1)  # Séparation en Q, K, V
-
-        # Reshape pour l'attention multi-têtes
-        q = qkv[0].view(batch, seq_len, self.nb_tetes, self.taille_tete).transpose(1, 2)
-        k = qkv[1].view(batch, seq_len, self.nb_tetes, self.taille_tete).transpose(1, 2)
-        v = qkv[2].view(batch, seq_len, self.nb_tetes, self.taille_tete).transpose(1, 2)
-
-        # Calcul de l'attention
-        scores = torch.matmul(q, k.transpose(-2, -1)) / (self.taille_tete ** 0.5)
-        scores = scores.masked_fill(
-            self.triangle_inferieur[:seq_len, :seq_len].unsqueeze(0).unsqueeze(0) == 0,
-            float('-inf')
+        qkv = self.shared_proj(x).view(
+            batch, seq_len, 3, self.nb_tetes, self.taille_tete
         )
-        scores = F.softmax(scores, dim=-1)
+        q, k, v = qkv.unbind(dim=2)
+        q = q.transpose(1, 2)
+        k = k.transpose(1, 2)
+        v = v.transpose(1, 2)
 
-        # Application de l'attention
-        out = torch.matmul(scores, v)  # (batch, nb_tetes, seq_len, taille_tete)
-        out = out.transpose(1, 2).contiguous().view(batch, seq_len, -1)  # (batch, seq_len, dimension_embedding)
+        prefix_size = self.prefix_k.size(2)
+        if prefix_size:
+            k = torch.cat((self.prefix_k.expand(batch, -1, -1, -1), k), dim=2)
+            v = torch.cat((self.prefix_v.expand(batch, -1, -1, -1), v), dim=2)
+            causal_mask = torch.ones(
+                seq_len, prefix_size + seq_len, dtype=torch.bool, device=x.device
+            )
+            causal_mask[:, prefix_size:] = torch.ones(
+                seq_len, seq_len, dtype=torch.bool, device=x.device
+            ).tril()
+        else:
+            causal_mask = None
 
-        # Projection finale
+        out = F.scaled_dot_product_attention(
+            q,
+            k,
+            v,
+            attn_mask=causal_mask,
+            dropout_p=self.dropout_rate if self.training else 0.0,
+            is_causal=causal_mask is None,
+        )
+        out = out.transpose(1, 2).contiguous().view(batch, seq_len, -1)
         return self.projection(out)
-
-class LowRankFeedForward(nn.Module):
-    """
-    Réseau FeedForward avec approximation de rang faible.
-    Réduit le nombre de paramètres en utilisant une décomposition de rang faible.
-    """
-
-    def __init__(self, dimension_embedding, rank=16, dropout_rate=0.2):
-        """
-        Args:
-            dimension_embedding (int): dimension d'entrée et de sortie.
-            rank (int): rang de l'approximation (plus petit = moins de paramètres).
-            dropout_rate (float): taux de dropout.
-        """
-        super().__init__()
-        self.rank = rank
-        self.up = nn.Linear(dimension_embedding, rank, bias=False)
-        self.down = nn.Linear(rank, 4 * dimension_embedding, bias=False)
-        self.final = nn.Linear(4 * dimension_embedding, dimension_embedding)
-        self.relu = nn.ReLU()
-        self.dropout = nn.Dropout(dropout_rate)
-
-    def forward(self, x):
-        """
-        Args:
-            x (torch.Tensor): tenseur d'entrée.
-
-        Returns:
-            torch.Tensor: tenseur transformé par le MLP à rang faible.
-        """
-        x = self.down(self.relu(self.up(x)))  # (batch, seq_len, 4 * dimension_embedding)
-        return self.final(self.dropout(x))
 
 class OptimizedTransformerBlock(nn.Module):
     """
@@ -261,7 +254,6 @@ class OptimizedTransformerBlock(nn.Module):
         dropout_rate=0.2,
         memory_size=64,
         num_reflection_tokens=4,
-        rank=16
     ):
         """
         Args:
@@ -271,32 +263,20 @@ class OptimizedTransformerBlock(nn.Module):
             dropout_rate (float): taux de dropout.
             memory_size (int): taille de la mémoire externe.
             num_reflection_tokens (int): nombre de tokens de réflexion.
-            rank (int): rang pour le FeedForward à rang faible.
         """
         super().__init__()
         self.dimension_embedding = dimension_embedding
         self.memory_size = memory_size
         self.num_reflection_tokens = num_reflection_tokens
-
-        # Mémoire externe (apprise)
-        self.memory = nn.Parameter(torch.randn(1, memory_size, dimension_embedding))
-
-        # Tokens de réflexion (appris)
-        self.reflection_tokens = nn.Parameter(
-            torch.randn(1, num_reflection_tokens, dimension_embedding)
-        )
-
-        # Attention multi-têtes avec poids partagés
         self.attention = SharedMultiHeadAttention(
             dimension_embedding,
-            taille_bloc + memory_size + num_reflection_tokens,
-            nb_tetes
+            taille_bloc,
+            nb_tetes,
+            dropout_rate,
+            memory_size,
+            num_reflection_tokens,
         )
-
-        # FeedForward à rang faible
-        self.reseau_ffwd = LowRankFeedForward(dimension_embedding, rank, dropout_rate)
-
-        # Normalisation et dropout
+        self.reseau_ffwd = FeedForward(dimension_embedding, dropout_rate)
         self.norme1 = nn.LayerNorm(dimension_embedding)
         self.norme2 = nn.LayerNorm(dimension_embedding)
         self.dropout = nn.Dropout(dropout_rate)
@@ -309,20 +289,6 @@ class OptimizedTransformerBlock(nn.Module):
         Returns:
             torch.Tensor: tenseur de même forme, après attention et feed-forward.
         """
-        batch, seq_len, _ = x.shape
-
-        # Ajouter la mémoire et les tokens de réflexion
-        memory_expanded = self.memory.expand(batch, -1, -1)
-        reflection_expanded = self.reflection_tokens.expand(batch, -1, -1)
-        extended_x = torch.cat([memory_expanded, reflection_expanded, x], dim=1)
-
-        # Attention
-        attn_out = self.attention(self.norme1(extended_x))
-        # Ne garder que la partie correspondant à x (ignorer mémoire et tokens de réflexion)
-        attn_out = attn_out[:, -seq_len:]
-        x = x + self.dropout(attn_out)
-
-        # FeedForward
+        x = x + self.dropout(self.attention(self.norme1(x)))
         x = x + self.dropout(self.reseau_ffwd(self.norme2(x)))
-
         return x

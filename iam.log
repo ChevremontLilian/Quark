@@ -506,3 +506,19 @@ Returning 710 (CUDA_ERROR_ASSERT) from cuStreamSynchronize
 2026-11-25 14:33:45,650 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
 2026-11-25 14:44:41,162 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
 2026-11-25 14:44:41,162 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-26 16:21:13,912 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\chevr\\AppData\\Local\\Python\\pythoncore-3.15-64\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-26 16:21:13,913 - INFO - Using writeable comtypes cache directory: 'C:\Users\chevr\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\comtypes\gen'
+2026-11-26 16:30:58,112 - INFO - Ajout au corpus: Q: salut R: Bonjour ! Comment puis-je vous aider.
+2026-11-26 16:31:46,316 - INFO - Ajout au corpus: Q: comment tu vas ? R: En tant qu'IA je n'ai pas vraiment de sensation mais je suppose que je vais bien !
+2026-11-26 16:32:23,918 - INFO - Ajout au corpus: Q: combien fait 2+2 ? R: 2 + 2 est égal à 4.
+2026-11-26 16:35:58,687 - INFO - Ajout au corpus: Q: très bien et toi ? R: Je vais bien, merci ! Alors que fait-on ?
+2026-11-26 16:43:31,632 - INFO - Ajout au corpus: Q: salut R: Salut, utilisateur !
+2026-11-26 16:44:35,887 - INFO - Ajout au corpus: Q: comment tu vas ? R: Je me considère comme étant une IA qui va bien, merci de demander !
+2026-11-26 16:45:31,651 - INFO - Ajout au corpus: Q: quelle est la capitale de la France ? R: La capitale de la France porte le nom de 'Paris'.
+2026-11-26 16:46:42,160 - INFO - Ajout au corpus: Q: qui est gandalf ? R: C'est un sorcier très connu, il fait parti des principaux personnages de la série dénommée : Le seigneur des anneaux.
+2026-11-26 16:47:17,938 - INFO - Ajout au corpus: Q: Qui suis-je ? R: Vous êtes l'utilisateur qui me questionne en ce moment même.
+2026-11-26 16:50:33,223 - INFO - Ajout au corpus: Q: Quelle est la capitale de l'Espagne ? R: La capitale de l'Espagne est Madrid.
+2026-11-26 16:54:15,727 - INFO - Ajout au corpus: Q: Qui a écrit Roméo et Juliette ? R: Le célèbre William Shakespear !
+2026-11-26 17:01:47,644 - INFO - Ajout au corpus: Q: Comment désactiver une interface via la cli d'un routeur Cisco ? R: Il suffit de vous placer dans sur l'interface que vous voulez désactiver exemple: ``` router>enable \n router#conf t \n router(config)#interface G0/0 \n router(config-if)#shutdown```
+2026-11-26 17:05:34,611 - INFO - Ajout au corpus: Q: QUel est la capital de la france R: J'en déduis que vous me demandez la capitale de la France, la capitale de la France est Paris.
+2026-11-26 17:06:04,332 - INFO - Ajout au corpus: Q: Qui a écrit Roméo et Juliette R: William Shakespear.

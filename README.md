@@ -73,9 +73,31 @@ l'entraînement, toutes les variantes d'une question normalisée sont placées
 dans la même partition train ou validation afin d'éviter une fuite entre les
 deux jeux.
 
+Le tokenizer `Models/tokenizer.model` est réutilisé sans réentraînement au
+chargement. Un réentraînement doit être demandé explicitement avec
+`load_corpus(..., retrain_tokenizer=True)` sur une nouvelle instance GPT, car
+ses IDs font partie du contrat du checkpoint. La séquence d'apprentissage
+commence par BOS et le préfixe exact `Q: {question} R:`; la perte porte par
+défaut sur la réponse et EOS, pas sur le prompt. `GPT.fit(...)` entraîne le
+modèle sans masquer `nn.Module.train()`; le chat reçoit la question brute et
+renvoie uniquement la réponse.
+
 Les exemples du corpus ne sont pas réécrits automatiquement au lancement de
 l'application. Les corrections validées sont ajoutées au corpus actif par
-l'interface.
+l'interface et nécessitent un ré-entraînement pour être apprises. Les poids du
+meilleur checkpoint sont sauvegardés atomiquement et restaurés après
+l'entraînement ou son arrêt.
+
+Auditer les lignes potentiellement suspectes et les questions ayant de
+nombreuses réponses distinctes, sans modifier le corpus :
+
+```powershell
+python -m Scripts.corpus_audit
+```
+
+Le checkpoint existant `Models/Reason.pth` utilise l'ancienne architecture.
+Il n'est pas chargé par la nouvelle architecture; sa copie est conservée sous
+`Models/Reason-legacy.pth` avant tout entraînement depuis zéro.
 
 ## Vérifications
 

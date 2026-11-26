@@ -18,14 +18,34 @@ CORRECTIONS_FILE = str(Path(DATA_DIR) / "corrections.txt")
 MEMORY_FILE = str(Path(DATA_DIR) / "memories.json")
 LOG_FILE = str(PROJECT_ROOT / "iam.log")
 
+# Paramètres du modèle
+MODEL_PARAMS = {
+    "block_size": 256,
+    "embedding_dim": 256,
+    "num_heads": 8,
+    "num_layers": 4,
+    "dropout": 0.1,
+    "vocab_size": 2048,
+    "learning_rate": 5e-4,
+    "memory_size": 64,
+    "num_reflection_tokens": 4,
+    "loss_on_prompt": False,
+}
+
 # Paramètres d'entraînement
 TRAINING_PARAMS = {
-    "convergence_threshold": 1,
-    "patience": 8,
-    "batch_size": 8,
+    "convergence_threshold": 0.1,
+    "patience": 6,
+    "batch_size": 32,
     "eval_interval": 250,
-    "max_steps": 10000,
-    "eval_iterations": 50
+    "max_steps": 6000,
+    "eval_iterations": 20
+}
+
+GENERATION_PARAMS = {
+    "max_new_tokens": 160,
+    "temperature": 0.7,
+    "top_k": 40,
 }
 
 # Paramètres de l'interface

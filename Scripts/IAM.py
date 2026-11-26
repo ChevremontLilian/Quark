@@ -11,6 +11,7 @@ import inspect
 import threading
 import queue
 import logging
+import shutil
 from math import cos, radians, sin
 import tkinter as tk
 from tkinter import ttk, scrolledtext, Scrollbar,messagebox, font as tkfont
@@ -269,6 +270,7 @@ class ModelManager:
         self.training_thread = None
         self.message_queue = queue.Queue()
         self.stop_training_event = threading.Event()
+        self.load_error = None
         
         # Initialiser le modèle
         self._init_model()
@@ -291,26 +293,30 @@ class ModelManager:
         try:
             self.model.load_corpus(CORPUS_MAIN)
             self.model.load_model(MAIN_MODEL)
+            self.load_error = None
             return True
         except Exception as e:
+            self.load_error = str(e)
             print(f"Erreur lors du chargement du modèle: {e}")
             return False
     
     def train_model(self, on_progress=None,removeOldmodel=True):
-        """Entraîne le modèle en arrière-plan"""
+        """Entraîne le modèle sans supprimer le checkpoint précédent."""
         if self.is_training:
             raise RuntimeError("Un entraînement est déjà en cours.")
+        if self.model is None:
+            raise RuntimeError("Le modèle GPT n'a pas pu être initialisé.")
 
         self.stop_training_event.clear()
         self.training_error = None
         self.training_stopped = False
         self.training_supports_stop = False
-        train_method = self.model.train
+        train_method = self.model.fit
         try:
             train_parameters = inspect.signature(train_method).parameters
         except (TypeError, ValueError, OSError) as error:
             train_parameters = {}
-            logging.warning("Impossible d'inspecter GPT.train: %s", error)
+            logging.warning("Impossible d'inspecter GPT.fit: %s", error)
         accepts_extra_keywords = any(
             parameter.kind is inspect.Parameter.VAR_KEYWORD
             for parameter in train_parameters.values()
@@ -322,28 +328,46 @@ class ModelManager:
         
         def _train():
             try:
-                if on_progress and removeOldmodel:
-                    on_progress("Suppression de l'ancien checkpoint...")
-                
-                # Supprimer l'ancien checkpoint
                 checkpoint_path = os.path.join(MODELS_DIR, f"{MAIN_MODEL}.pth")
-                if os.path.exists(checkpoint_path) and removeOldmodel:
-                    os.remove(checkpoint_path)
-                    if on_progress:
-                        on_progress("Ancien checkpoint supprimé")
-                
                 if on_progress:
                     on_progress("Chargement du corpus...")
                 self.model.load_corpus(CORPUS_MAIN)
-                
-                if on_progress and removeOldmodel:
-                    on_progress("Création du modèle...")
+
+                def archive_checkpoint():
+                    if not os.path.isfile(checkpoint_path):
+                        return None
+                    legacy_path = os.path.join(
+                        MODELS_DIR, f"{MAIN_MODEL}-legacy.pth"
+                    )
+                    if os.path.exists(legacy_path):
+                        legacy_path = os.path.join(
+                            MODELS_DIR,
+                            f"{MAIN_MODEL}-legacy-{time.strftime('%Y%m%d-%H%M%S')}.pth",
+                        )
+                    shutil.copy2(checkpoint_path, legacy_path)
+                    return legacy_path
+
                 if removeOldmodel:
-                    self.model.create_model(MAIN_MODEL)
-                
-                if on_progress:
-                    on_progress("Chargement du modèle...")
-                self.model.load_model(MAIN_MODEL)
+                    archived_path = archive_checkpoint()
+                    self.model.reset_parameters()
+                    self.model.loaded_model = MAIN_MODEL
+                    if archived_path and on_progress:
+                        on_progress(f"Ancien checkpoint conservé sous {archived_path}")
+                else:
+                    try:
+                        self.model.load_model(MAIN_MODEL)
+                    except (FileNotFoundError, RuntimeError) as error:
+                        archived_path = archive_checkpoint()
+                        self.model.reset_parameters()
+                        self.model.loaded_model = MAIN_MODEL
+                        message = (
+                            "Checkpoint absent ou incompatible; entraînement depuis zéro."
+                        )
+                        if archived_path:
+                            message += f" Copie conservée sous {archived_path}."
+                        logging.warning("%s Cause: %s", message, error)
+                        if on_progress:
+                            on_progress(message)
                 
                 if on_progress:
                     on_progress("Entraînement en cours...")
@@ -369,7 +393,9 @@ class ModelManager:
                 if self.training_supports_stop:
                     train_options["stop_event"] = self.stop_training_event
 
-                self.training_stopped = self.model.train(**TRAINING_PARAMS, **train_options)
+                self.training_stopped = self.model.fit(
+                    **TRAINING_PARAMS, **train_options
+                )
                 
             except Exception as e:
                 self.training_error = str(e)
@@ -398,11 +424,7 @@ class ModelManager:
             return "Modèle non chargé ou entraînement en cours..."
         
         try:
-            full_answer = str(self.model.chat(f"Q:{question} R:"))
-            # Extraire la réponse entre R: et le premier ! ou la fin
-            answer_start = full_answer.find("R:") + 2
-            answer_end = full_answer.find("!") if "!" in full_answer else len(full_answer)
-            return full_answer[answer_start:answer_end].strip()
+            return self.model.chat(question)
         except Exception as e:
             print(f"Erreur lors du chat: {e}")
             return f"Erreur: {e}"
@@ -925,7 +947,10 @@ class IAMGUI:
                 self.status_label.config(text="Statut: Modèle chargé ✅")
             else:
                 self.model_loaded = False
-                self.status_label.config(text="Statut: Échec du chargement ❌")
+                self.status_label.config(
+                    text=f"Statut: Modèle à entraîner depuis zéro — "
+                    f"{self.model_manager.load_error or 'chargement impossible'}"
+                )
         
         threading.Thread(target=_load, daemon=True).start()
     
@@ -933,10 +958,6 @@ class IAMGUI:
         """Démarre l'entraînement du modèle"""
         if self.is_training:
             messagebox.showinfo("Info", "Un entraînement est déjà en cours.")
-            return
-        
-        if not self.model_loaded:
-            messagebox.showwarning("Avertissement", "Veuillez d'abord charger le modèle.")
             return
         
         self.is_training = True
@@ -966,10 +987,6 @@ class IAMGUI:
             """Démarre l'entraînement du modèle"""
             if self.is_training:
                 messagebox.showinfo("Info", "Un entraînement est déjà en cours.")
-                return
-            
-            if not self.model_loaded:
-                messagebox.showwarning("Avertissement", "Veuillez d'abord charger le modèle.")
                 return
             
             self.is_training = True
@@ -1024,7 +1041,9 @@ class IAMGUI:
                 self.status_label.config(text="Statut: Échec de l'entraînement ❌")
                 messagebox.showerror("Erreur d'entraînement", error)
             elif self.model_manager.training_stopped:
-                self.status_label.config(text="Statut: Entraînement arrêté; modèle sauvegardé")
+                self.status_label.config(
+                    text="Statut: Entraînement arrêté; meilleur checkpoint conservé"
+                )
                 self.model_loaded = True
             else:
                 self.status_label.config(text="Statut: Entraînement terminé ✅")
@@ -1107,9 +1126,11 @@ class IAMGUI:
         # Ajouter au corpus
         success = self.model_manager.add_to_corpus(self.last_question, self.last_answer)
         if success:
-            self.display_message("Système", f"✅ Réponse validée et ajoutée au corpus: Q: {self.last_question} R: {self.last_answer}")
-            # Recharger le modèle pour prendre en compte la nouvelle donnée
-            self.model_manager.model.load_corpus(CORPUS_MAIN)
+            self.display_message(
+                "Système",
+                "✅ Réponse validée et ajoutée au corpus. "
+                "Un ré-entraînement est nécessaire pour l'intégrer au modèle.",
+            )
         else:
             self.display_message("Système", "❌ Erreur lors de l'ajout au corpus.")
         
@@ -1144,9 +1165,11 @@ class IAMGUI:
         # Ajouter la correction au corpus
         success = self.model_manager.add_to_corpus(self.last_question, corrected_answer)
         if success:
-            self.display_message("Système", f"✅ Correction enregistrée: Q: {self.last_question} R: {corrected_answer}")
-            # Recharger le modèle
-            self.model_manager.model.load_corpus(CORPUS_MAIN)
+            self.display_message(
+                "Système",
+                "✅ Correction enregistrée. "
+                "Un ré-entraînement est nécessaire pour l'intégrer au modèle.",
+            )
         else:
             self.display_message("Système", "❌ Erreur lors de l'enregistrement de la correction.")
         

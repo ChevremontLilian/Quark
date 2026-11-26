@@ -144,3 +144,17 @@ L'orientation professionnelle est une étape cruciale dans la vie académique et
 2026-11-11 21:21:04 - Q: bonjour R: Bonjour, comment puis-je t'aider ?
 2026-11-21 19:36:16 - Q: salut R: Bonjour utilisateur, qu'allons-nous faire aujourd'hui ?
 2026-11-25 14:32:44 - Q: salut R: Salut, que comptes-tu faire aujourd'hui ?
+2026-11-26 16:30:58 - Q: salut R: Bonjour ! Comment puis-je vous aider.
+2026-11-26 16:31:46 - Q: comment tu vas ? R: En tant qu'IA je n'ai pas vraiment de sensation mais je suppose que je vais bien !
+2026-11-26 16:32:23 - Q: combien fait 2+2 ? R: 2 + 2 est égal à 4.
+2026-11-26 16:35:58 - Q: très bien et toi ? R: Je vais bien, merci ! Alors que fait-on ?
+2026-11-26 16:43:31 - Q: salut R: Salut, utilisateur !
+2026-11-26 16:44:35 - Q: comment tu vas ? R: Je me considère comme étant une IA qui va bien, merci de demander !
+2026-11-26 16:45:31 - Q: quelle est la capitale de la France ? R: La capitale de la France porte le nom de 'Paris'.
+2026-11-26 16:46:42 - Q: qui est gandalf ? R: C'est un sorcier très connu, il fait parti des principaux personnages de la série dénommée : Le seigneur des anneaux.
+2026-11-26 16:47:17 - Q: Qui suis-je ? R: Vous êtes l'utilisateur qui me questionne en ce moment même.
+2026-11-26 16:50:33 - Q: Quelle est la capitale de l'Espagne ? R: La capitale de l'Espagne est Madrid.
+2026-11-26 16:54:15 - Q: Qui a écrit Roméo et Juliette ? R: Le célèbre William Shakespear !
+2026-11-26 17:01:47 - Q: Comment désactiver une interface via la cli d'un routeur Cisco ? R: Il suffit de vous placer dans sur l'interface que vous voulez désactiver exemple: ``` router>enable \n router#conf t \n router(config)#interface G0/0 \n router(config-if)#shutdown```
+2026-11-26 17:05:34 - Q: QUel est la capital de la france R: J'en déduis que vous me demandez la capitale de la France, la capitale de la France est Paris.
+2026-11-26 17:06:04 - Q: Qui a écrit Roméo et Juliette R: William Shakespear.
